@@ -61,8 +61,18 @@
     C = secondhand reconstruction<br>
     D = mostly synthetic or thin sources
   </div>
-  <p>A grade is a human judgement, recorded with written reasons. The engine does not invent grades; it records the letter and basis a human supplied, attaches the corpus and test evidence, and writes the file. A grade is not complete until a person signs it - until then the site shows it plainly as, for example, "grade A (unsigned)". Fictional figures get the same treatment, with an extra honesty requirement: where a character's voice lives inside someone else's narration (Ahab inside Ishmael's story, Gatsby inside Nick's), the grade basis says so.</p>
-  <p class="mono">Where to check: the rubric and signing rule are in engine/grade.mjs; each figure's written grade lives in its own GRADE.md.</p>
+  <p>A grade is a human judgement, recorded with written reasons. The engine does not invent grades; it records the letter and basis a human supplied, attaches the corpus and test evidence, and writes the file. Fictional figures get the same treatment, with an extra honesty requirement: where a character's voice lives inside someone else's narration (Ahab inside Ishmael's story, Gatsby inside Nick's), the grade basis says so.</p>
+  <p class="mono">Where to check: the rubric is in engine/grade.mjs; each figure's written grade lives in its own GRADE.md.</p>
+
+  <h2>The verification ladder</h2>
+  <p>A grade tells you how good the corpus is. A separate question is who has checked the figure, and how far that check went. We answer that with a three-rung ladder rather than a signature, because a grade signed by an automated agent must never be mistaken for a human's sign-off. The site never presents an agent signature as a human one; it states plainly, at each rung, exactly who or what did the checking. Every figure carries its rung status on its card and in its detail view.</p>
+  <div class="rubric">
+    machine-verified = automatic checks that run on every figure - the source is byte-verified, the adversarial bait suite has a recorded pass score, the corpus is pinned by hash, and the persona's citations resolve to the corpus. These numbers are always shown alongside the figure, never hidden.<br>
+    engine-reviewed = the engine's maintaining agent completed a documented deep review of the figure and recorded the verdict PASS in the figure's REVIEW.md.<br>
+    expert-verified = a verified human scholar reviewed the figure and vouched for it.
+  </div>
+  <p><b>Engine-reviewed is an AI review, and we say so.</b> The deep review behind that rung is performed by the engine's own maintaining AI agent, not by a person; it is a machine checking a machine's work, recorded in writing and open to inspection, and it is never dressed up as a human endorsement. <b>Expert-verified is reserved.</b> It is granted only by a verified human scholar - a credentialed expert who has passed identity verification through the professor program - and no figure holds it yet, so every figure currently reads "awaiting expert review" on that rung. The professor program (the mechanism that verifies a scholar's identity before their review can count) is specified but not yet live.</p>
+  <p class="mono">Where to check: the machine checks come from engine/verify-integrity.mjs (integrity pins), each figure's BAIT_RESULTS.md (bait score), and the engine ledger; the engine-review verdict lives in each reviewed figure's REVIEW.md; the professor-program design is in engine/PROFESSOR_PROGRAM_SPEC.md. The manifest that drives the site is built by engine/build-manifest.mjs.</p>
 
   <h2>Receipts</h2>
   <p>Every layer keeps its paperwork:</p>
