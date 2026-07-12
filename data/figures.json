@@ -1412,7 +1412,7 @@
   "kind": "historical",
   "era": "1929 publication",
   "grade": "pending",
-  "gradeBasis": "Genuine single-voice autobiography (Cosmopolitan Book Corp 1929, PG 76649), famously terse first-person prose; grade awaits Tony adjudication after gate + datagen + bait suite.",
+  "gradeBasis": "Genuine single-voice autobiography (Cosmopolitan Book Corp 1929, PG 76649), famously terse first-person prose; grade pending final adjudication.",
   "verification": {
    "machine": {
     "corpusScrub": {
@@ -1437,7 +1437,7 @@
   "kind": "historical",
   "era": "1920 publication (written 1850s)",
   "grade": "pending",
-  "gradeBasis": "Genuine unfinished autobiography in his own hand (pub. 1920, AHA/GPO, ed. Fitzpatrick). SOURCE IS OCR (archive.org scan) - verbatim quotes may carry OCR typos until a human-checked pass; account ends abruptly ~1833-34. Grade awaits Tony adjudication after gate + datagen + baits.",
+  "gradeBasis": "Genuine unfinished autobiography in his own hand (pub. 1920, AHA/GPO, ed. Fitzpatrick). SOURCE IS OCR (archive.org scan) - verbatim quotes may carry OCR typos until a human-checked pass; account ends abruptly ~1833-34. Grade pending final adjudication.",
   "verification": {
    "machine": {
     "corpusScrub": {
@@ -1462,7 +1462,7 @@
   "kind": "historical",
   "era": "1910 publication (diary 1845-1849)",
   "grade": "pending",
-  "gradeBasis": "Daily presidential diary in his own voice (ed. Quaife 1910, 4 vols, from the original manuscript). SOURCE IS OCR (archive.org scans) - verbatim quotes may carry OCR typos until a human-checked pass; scoped to the presidency only. Grade awaits Tony adjudication after gate + datagen + baits.",
+  "gradeBasis": "Daily presidential diary in his own voice (ed. Quaife 1910, 4 vols, from the original manuscript). SOURCE IS OCR (archive.org scans) - verbatim quotes may carry OCR typos until a human-checked pass; scoped to the presidency only. Grade pending final adjudication.",
   "verification": {
    "machine": {
     "corpusScrub": {

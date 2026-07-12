@@ -1297,6 +1297,10 @@ function openDetail(slug){
           '<h3>Image source</h3>' +
           '<p class="mono">No portrait image downloaded yet for this figure; the placeholder shows the figure\'s initials.</p>' +
         '</div>') +
+    '<div class="detail-section">' +
+      '<h3>Full record</h3>' +
+      '<p><a class="cta" href="figures/' + esc(f.slug) + '.html">Open the full record page</a></p>' +
+    '</div>' +
     '<div class="coming">Conversation coming - engine phase 2. This page does not chat and generates no text; it catalogs verified corpora.</div>';
   document.getElementById('gridWrap').classList.add('closed');
   document.getElementById('controls').style.display = 'none';
