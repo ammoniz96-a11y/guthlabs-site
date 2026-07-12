@@ -4,7 +4,190 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Library - Guth Labs</title>
-<link rel="stylesheet" href="shared.css">
+<style>
+/* Guth Labs monograph system - university-press page, serif, paper, crimson accents */
+:root{
+  --paper:#f7f4ec;
+  --ink:#221d15;
+  --ink-soft:#3b342a;
+  --muted:#5c5346;
+  --accent:#7d2a24;
+  --rule:#c7bda9;
+  --rule-light:#ddd5c4;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  font-size:1.0625rem;
+  line-height:1.7;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+}
+a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;}
+a:hover{text-decoration-thickness:2px;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+::selection{background:#e8dfc9;}
+[hidden]{display:none !important;}
+
+/* Running head */
+.topbar{border-bottom:3px double var(--rule);}
+.topbar-inner{max-width:46rem;margin:0 auto;padding:2rem 1rem .9rem;text-align:center;}
+.brand{
+  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:0 .75rem;
+  font-variant:small-caps;font-size:1.35rem;letter-spacing:.16em;
+  color:var(--ink);text-decoration:none;
+}
+.brand:hover{color:var(--accent);}
+.brand-sub{
+  margin:.1rem 0 .8rem;
+  font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--muted);
+}
+.tabnav{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.2rem;}
+.tabnav a{
+  display:inline-flex;align-items:center;min-height:44px;
+  padding:0 .65rem;
+  font-variant:small-caps;font-size:1rem;letter-spacing:.09em;
+  color:var(--ink);text-decoration:none;
+  border-bottom:2px solid transparent;
+}
+.tabnav a:hover{color:var(--accent);border-bottom-color:var(--accent);}
+.tabnav a.active{color:var(--accent);border-bottom-color:var(--accent);}
+
+/* Text block - classical measure, wide margins */
+.page{max-width:41rem;margin:0 auto;padding:2.8rem 1.4rem 4.5rem;}
+
+h1{
+  margin:2.2rem 0 .4rem;
+  font-weight:400;
+  font-size:clamp(2.1rem,6vw,2.75rem);
+  letter-spacing:.02em;
+  text-align:center;
+  line-height:1.2;
+}
+h1::after{
+  content:"";display:block;
+  width:5rem;margin:1.1rem auto 0;
+  border-bottom:1px solid var(--rule);
+}
+
+/* Raised lede with drop cap */
+.lede{
+  margin:2rem 0 2.6rem;
+  font-size:1.14rem;
+  line-height:1.75;
+}
+.lede::first-letter{
+  float:left;
+  font-size:3.3em;
+  line-height:.82;
+  padding:.06em .1em 0 0;
+  color:var(--accent);
+}
+
+/* Small-caps section heads with centered ornament rule */
+h2{
+  margin:3.2rem 0 1.2rem;
+  font-variant:small-caps;
+  font-weight:600;
+  font-size:1.15rem;
+  letter-spacing:.09em;
+  text-align:center;
+  line-height:1.35;
+}
+h2::before{
+  content:"";display:block;
+  width:2.5rem;margin:0 auto .85rem;
+  border-top:1px solid var(--rule);
+}
+
+p{margin:0 0 1.15rem;text-align:justify;hyphens:auto;}
+
+/* Book list - hanging catalog entries */
+ul{
+  margin:1.5rem 0 2rem;
+  padding-left:1.4rem;
+}
+li{
+  margin:0 0 .7rem;
+  text-align:justify;
+  hyphens:auto;
+}
+li::marker{color:var(--accent);}
+
+/* Book table - horizontal hairlines only */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:1.5rem 0 2rem;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  font-size:1rem;
+}
+th{
+  padding:.45rem .5rem .45rem 0;
+  border-bottom:1px solid var(--rule);
+  vertical-align:bottom;
+  text-align:left;
+  font-weight:600;
+  font-variant:small-caps;
+  letter-spacing:.07em;
+  font-size:1.02rem;
+}
+td{
+  padding:.3rem .5rem .3rem 0;
+  border-bottom:1px solid var(--rule-light);
+  vertical-align:middle;
+  text-align:left;
+}
+tr:last-child td{border-bottom:none;}
+td:first-child{padding-right:1.75rem;}
+td:first-child a{
+  display:inline-flex;align-items:center;min-height:44px;
+  font-variant:small-caps;letter-spacing:.07em;font-size:1.08rem;
+}
+
+/* Catalog scrolls inside its own frame if it must, never the page */
+#catalog-container{overflow-x:auto;}
+
+/* Footnote-style receipts */
+.mono{
+  font-family:ui-monospace,"Cascadia Mono",Consolas,Menlo,"SF Mono",monospace;
+  font-size:.8rem;
+  letter-spacing:.02em;
+  text-align:left;
+  hyphens:none;
+  color:var(--ink);
+  border-top:1px solid var(--rule);
+  padding-top:.95rem;
+  margin:1.9rem 0 .55rem;
+}
+span.mono{
+  border:none;padding:0;margin:0;
+  font-size:.85em;
+}
+.mono + p{
+  font-size:.96rem;
+  color:var(--ink-soft);
+  line-height:1.65;
+}
+
+/* Colophon */
+.foot{
+  margin-top:3.6rem;
+  border-top:3px double var(--rule);
+  padding-top:1.3rem;
+  text-align:center;
+  font-size:.87rem;
+  color:var(--muted);
+}
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -28,30 +211,23 @@
 <div class="page">
 
 <h1>Library</h1>
-<p class="lede">Every mind we build is built from something, and this page lists it: edition, provenance, license basis, chunk counts, scrub and gate results, per corpus, honest, including failures.</p>
+<p class="lede">The works the minds are built from: edition, license basis, scrub receipt, and the mind each work becomes. The minds themselves live on <a href="figures.html">Figures</a>; the books live here.</p>
 
-<h3>What a corpus record holds</h3>
 <ul>
-  <li>The source work and edition: a named translation with its year.</li>
-  <li>The license basis: public domain.</li>
-  <li>What the scrub kept and dropped: corpus-scrub/1.0.0 records chunks in, kept, and dropped.</li>
-  <li>The current gate verdict: corpus-gate/1.2.0 checks grounding, language, apparatus, and token freshness.</li>
+  <li>License basis for every work in the catalog: public domain.</li>
+  <li>Scrub receipts: corpus-scrub/1.0.0 records chunks in, kept, and dropped per work.</li>
+  <li>Gate verdicts: corpus-gate/1.2.0 checks grounding, language, apparatus, and token freshness. Verdicts move; this table renders the live data file, not copy.</li>
+  <li>As of 2026-07-11 these works build 43 minds: 29 grade A, 11 grade B, 3 pending. 4 named gate-FAILs: Marcus Aurelius, Mary Somerville, Captain Ahab, and Jean-Jacques Rousseau (mid-recalibration; automatic remediation runs).</li>
 </ul>
-<p>Grades and gate verdicts can move. This table renders the live data file, not copy.</p>
-
-<h3>The catalog</h3>
-<p>As of 2026-07-11 the catalog holds 43 minds: 29 grade A, 11 grade B, 3 pending. It also holds 4 named gate-FAILs: Marcus Aurelius, Mary Somerville, Captain Ahab, and Jean-Jacques Rousseau (mid-recalibration; automatic remediation runs).</p>
 
 <div id="catalog-container">
   <table id="catalog-table">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Kind</th>
-        <th>Era/Edition</th>
-        <th>Grade</th>
+        <th>Edition / era</th>
         <th>Chunks kept</th>
         <th>Gate</th>
+        <th>Built into</th>
       </tr>
     </thead>
     <tbody id="catalog-body">
@@ -63,8 +239,7 @@
   <p class="mono">The catalog could not load. The data file is data/figures.json; the gallery at gallery.html lists every mind.</p>
 </noscript>
 
-<h3>Why an honest catalog</h3>
-<p>BasedClaims, the company's founding project, scraped 57,242 sources and extracted roughly 600,000 claims in April 2026. That instinct survives here as a catalog that publishes its receipts instead of its size. See <a href="research.html">Research</a> for the methods and <a href="gallery.html">the gallery</a> for the minds themselves.</p>
+<p>BasedClaims, the company's founding project, scraped 57,242 sources and extracted roughly 600,000 claims in April 2026. That instinct survives here as a catalog that publishes its receipts instead of its size. Methods on <a href="research.html">Research</a>.</p>
 
 <footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
 
@@ -84,7 +259,7 @@
         var gate = fig.verification && fig.verification.machine && fig.verification.machine.corpusGate;
         var chunksKept = (scrub && scrub.chunks_kept !== undefined && scrub.chunks_kept !== null) ? scrub.chunks_kept : '-';
         var gateVerdict = (gate && gate.verdict) ? gate.verdict : '-';
-        [fig.displayName || '-', fig.kind || '-', fig.era || '-', fig.grade || '-', chunksKept, gateVerdict].forEach(function (val) {
+        [fig.edition || fig.era || '-', chunksKept, gateVerdict, fig.displayName || '-'].forEach(function (val) {
           var td = document.createElement('td');
           td.textContent = val;
           tr.appendChild(td);

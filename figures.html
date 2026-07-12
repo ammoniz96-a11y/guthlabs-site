@@ -4,7 +4,272 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Figures - Guth Labs</title>
-<link rel="stylesheet" href="shared.css">
+<style>
+/* ============================================================
+   GUTH LABS MONOGRAPH SYSTEM
+   A university-press book page. Paper, ink, oxblood accent.
+   Classical measure, wide margins, small-caps heads, hairline
+   rules, footnote-style receipts. No animation, no images.
+   ============================================================ */
+
+:root{
+  --paper:   #f7f4ec;   /* laid paper                          */
+  --ink:     #211d16;   /* text ink, ~13:1 on paper            */
+  --accent:  #6e2b23;   /* oxblood, ~7.6:1 on paper            */
+  --muted:   #57503f;   /* apparatus grey-brown, ~7:1 on paper */
+  --rule:    #b9b09b;   /* hairline rules (decorative only)    */
+  --serif:   Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --mono:    ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
+  color-scheme: light;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ background: var(--paper); }
+
+body{
+  font-family: var(--serif);
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 1.0625rem;      /* 17px body, book size */
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection{ background: var(--accent); color: var(--paper); }
+
+a{
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+a:hover{ text-decoration-thickness: 2px; }
+a:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Running head / masthead ---------- */
+
+.topbar{
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+.topbar-inner{
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem 0.75rem;
+  text-align: center;
+}
+.brand{
+  display: inline-block;
+  font-variant: small-caps;
+  letter-spacing: 0.22em;
+  font-size: 1.35rem;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;   /* generous target */
+}
+.brand:hover{ color: var(--accent); }
+.brand-sub{
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 0.1rem;
+  margin-bottom: 0.9rem;
+}
+/* double rule between imprint and contents line, as on a title page */
+.brand-sub::after{
+  content: "";
+  display: block;
+  max-width: 46rem;
+  margin: 0.9rem auto 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  height: 4px;
+}
+.tabnav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.25rem;
+}
+.tabnav a{
+  display: inline-block;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 15px 11px;        /* 44px minimum target */
+}
+.tabnav a:hover{ color: var(--accent); text-decoration: underline; text-underline-offset: 0.35em; }
+.tabnav a.active{
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ---------- The page: classical measure, wide margins ---------- */
+
+.page{
+  max-width: 42rem;          /* ~66 characters, book measure */
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 2.5rem;
+}
+
+/* Chapter opening */
+h1{
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.15;
+}
+/* hairline flourish beneath the chapter head */
+h1::after{
+  content: "";
+  display: block;
+  width: 5.5rem;
+  margin: 1.1rem auto 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Raised lede, as the opening sentence of a chapter */
+.lede{
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.55;
+  text-align: center;
+  color: var(--ink);
+  margin: 1.4rem auto 0;
+  max-width: 34rem;
+}
+
+/* Section heads: centred small caps, as a press subhead */
+h2{
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.16em;
+  text-align: center;
+  color: var(--ink);
+  margin: 3rem 0 1.1rem;
+}
+h2::before{
+  content: "";
+  display: block;
+  width: 2.5rem;
+  margin: 0 auto 1.05rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+p{ margin: 1rem 0; }
+
+/* Primary door, set as a printed plate reference */
+.cta{
+  display: inline-block;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  padding: 14px 22px;        /* 44px minimum target */
+  background: transparent;
+}
+.cta:hover{
+  background: var(--accent);
+  color: var(--paper);
+}
+p:has(> .cta){ text-align: center; margin: 1.9rem 0 0.5rem; }
+
+/* ---------- Tables: the apparatus, footnote-style receipts ---------- */
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin: 0.25rem 0 1rem;
+  font-size: 0.95rem;
+}
+tr + tr td{ border-top: 1px dotted var(--rule); }
+td{
+  padding: 0.7rem 0.9rem 0.7rem 0;
+  vertical-align: top;
+}
+td:first-child{
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  width: 11.5rem;
+  padding-right: 1.25rem;
+  white-space: normal;
+}
+td:last-child{ padding-right: 0; }
+
+/* Machine receipts set as critical apparatus */
+.mono{
+  font-family: var(--mono);
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.mono a{ font-family: var(--serif); font-size: 0.95rem; }
+
+/* ---------- Lists ---------- */
+
+ul{
+  margin: 0.25rem 0 1rem;
+  padding-left: 1.4rem;
+}
+li{
+  margin: 0.55rem 0;
+  padding-left: 0.2rem;
+}
+li::marker{ color: var(--accent); }
+
+/* ---------- Colophon ---------- */
+
+.foot{
+  display: block;
+  margin-top: 3.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.83rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- Narrow page: the apparatus stacks ---------- */
+
+@media (max-width: 640px){
+  .page{ padding: 2.5rem 1.25rem 2rem; }
+  h1{ font-size: 2rem; }
+  .lede{ font-size: 1.15rem; }
+  table, tr, td{ display: block; width: 100%; }
+  table{ border-top-width: 1px; }
+  td{ padding: 0.15rem 0 0.6rem; }
+  td:first-child{
+    width: auto;
+    padding: 0.6rem 0 0.1rem;
+  }
+  tr + tr td{ border-top: none; }
+  tr + tr td:first-child{ border-top: 1px dotted var(--rule); }
+}
+
+/* No animation anywhere; belt-and-braces for user agents */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation: none !important;
+    transition: none !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="topbar">
@@ -28,38 +293,70 @@
 <div class="page">
 
   <h1>Figures</h1>
-  <p class="lede">Historical and fictional minds, each certified against the only thing we trust: its own surviving text. As of 2026-07-11 the catalog holds 43 minds. The gallery renders the live count.</p>
+  <p class="lede">Minds certified against the only thing we trust: their own surviving text.</p>
 
   <p><a class="cta" href="gallery.html">Open the gallery</a></p>
 
-  <h3>What a certified mind carries</h3>
-  <p>Every figure in the catalog ships with the same record. Nothing is added to the gallery without it.</p>
+  <h2>The ledger, as of 2026-07-11</h2>
+  <table>
+    <tr>
+      <td>Certified minds</td>
+      <td>43 in the catalog. The gallery renders the live count. <a href="gallery.html">Open the gallery</a>.</td>
+    </tr>
+    <tr>
+      <td>Gate-FAIL</td>
+      <td>4, named openly: Marcus Aurelius, Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. All four are mid-recalibration; remediation runs automatically. The FAIL is shown, not hidden.</td>
+    </tr>
+    <tr>
+      <td>Latest panel run</td>
+      <td class="mono">panel-verify/1.0.0, run 2026-07-12T01:49Z: corpus chunk aurelius:meditations-long1862:I:2 judged PANEL-GROUNDED, "3/3 lineages grounded, zero dissent." Lineages: Alibaba Qwen, Google DeepMind, Mistral AI. Dissent is recorded, never averaged away.</td>
+    </tr>
+    <tr>
+      <td>Latest citator rejection</td>
+      <td class="mono">2026-07-08: "The obstacle is the way" checked against the Marcus Aurelius corpus (Meditations, 1862 George Long translation). Result: FAIL. It appears nowhere in the corpus. It is a modern book title, not his sentence. Full receipt on <a href="verify.html">Verify</a>.</td>
+    </tr>
+  </table>
+
+  <h2>One mind, read end to end: Marcus Aurelius</h2>
+  <table>
+    <tr>
+      <td>Corpus</td>
+      <td>Meditations, 1862 George Long translation. The book lives on <a href="library.html">Library</a>.</td>
+    </tr>
+    <tr>
+      <td>Fidelity grade</td>
+      <td>A. Basis: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</td>
+    </tr>
+    <tr>
+      <td>Gate</td>
+      <td>Gate-FAIL under corpus-gate/1.2.0, mid-recalibration; remediation runs automatically. Shown, not hidden.</td>
+    </tr>
+    <tr>
+      <td>Panel</td>
+      <td class="mono">Chunk aurelius:meditations-long1862:I:2 judged PANEL-GROUNDED, "3/3 lineages grounded, zero dissent."</td>
+    </tr>
+    <tr>
+      <td>Citator</td>
+      <td class="mono">"The obstacle is the way": FAIL. It appears nowhere in the corpus.</td>
+    </tr>
+  </table>
+
+  <h2>Every mind carries the same record</h2>
   <ul>
-    <li>Its corpus: the exact work and edition it is built from, with license basis.</li>
-    <li>Its fidelity grade (A to D) with a published basis line. Marcus Aurelius, grade A: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</li>
-    <li>Its gate token: when it was certified and what it passed, checked by corpus-gate/1.2.0.</li>
-    <li>Verification receipts: scrub, gate, and panel reports. See <a href="research.html">Research</a> for methods.</li>
+    <li>Corpus: exact work and edition, with license basis. The books live on <a href="library.html">Library</a>.</li>
+    <li>Fidelity grade, A to D, with a published basis line.</li>
+    <li>Gate token: when it was certified and what it passed, checked by corpus-gate/1.2.0.</li>
+    <li>Receipts: scrub, gate, and panel reports. Methods on <a href="research.html">Research</a>.</li>
   </ul>
-  <div class="box">
-    <p class="mono">panel-verify/1.0.0, run 2026-07-12T01:49Z: corpus chunk aurelius:meditations-long1862:I:2 judged PANEL-GROUNDED, "3/3 lineages grounded, zero dissent." Three independent model lineages vote: Alibaba Qwen, Google DeepMind, Mistral AI. Dissent is recorded, never averaged away.</p>
-  </div>
-  <p>As of 2026-07-11, 4 figures are gate-FAIL and named openly: Marcus Aurelius, Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. All four are mid-recalibration; remediation runs automatically. The FAIL is shown, not hidden.</p>
 
-  <h3>Check any quote</h3>
-  <p>Paste any quote a figure gave you and get VERBATIM or FAIL against its corpus, with the divergence shown.</p>
-  <div class="box">
-    <p class="mono">Citator rejection, 2026-07-08: "The obstacle is the way" checked against the Marcus Aurelius corpus (Meditations, 1862 George Long translation). Result: FAIL. It appears nowhere in the corpus. It is a modern book title, not his sentence.</p>
-  </div>
-  <p>This is the citator running today, in the engine. It is how the line above got rejected. Full receipt on <a href="verify.html">Verify</a>. An inline check box on each figure's own page is coming and not built yet.</p>
-
-  <h3>The arena (planned)</h3>
-  <p>Debates between minds, voiced, are planned. The citator will run live on every quoted line as the debate happens. This is a spec today, not a built feature on this site.</p>
-
-  <h3>Request a figure (planned)</h3>
-  <p>Requesting the mind your work needs is planned and not built yet. Every requested figure would pass the same gates as the catalog before it ships. PIN holders (see <a href="education.html">Education</a>) are prompted to request figures in their own field.</p>
-
-  <h3>Owning a figure</h3>
-  <p>The ownership model, structurally: buy a figure once and it is unlocked forever, or hold an all-access subscription across the catalog. Expensive interactions, such as voice conversations, are metered separately. A bought figure becomes an agent on your desk across Guth Labs, tied to one account (see <a href="account.html">Account</a>). Purchasing is coming and not yet live on this site.</p>
+  <h2>What is live, what is not</h2>
+  <ul>
+    <li>Live: the citator runs today, in the engine. Paste any quote a figure gave you, get VERBATIM or FAIL against its corpus with the divergence shown. It rejected the line in the ledger above. Not yet live on this site. <a href="verify.html">Verify</a>.</li>
+    <li>Not built: an inline quote check box on each figure's own page.</li>
+    <li>Not built: the arena. Voiced debates between minds; the citator will run live on every quoted line. A spec today, not built.</li>
+    <li>Not built: figure requests. Any requested mind passes the same gates before it ships. PIN holders (<a href="education.html">Education</a>) are prompted to request figures in their own field.</li>
+    <li>Not built: purchasing. The model, structurally: buy a figure once and it is unlocked forever, or hold an all-access subscription across the catalog. Expensive interactions, such as voice, are metered separately. A bought figure becomes an agent on your desk across Guth Labs, tied to one account (<a href="account.html">Account</a>).</li>
+  </ul>
 
 <footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
 
