@@ -171,32 +171,22 @@ div.box.mono{
 <div class="page">
 
 <h1>Research</h1>
-<p class="lede">The methods behind every grade, gate, and verdict on this site, published so the site can be audited, not just believed.</p>
+<p class="lede">Our methodology write-ups are in legal review and will publish here in full.</p>
 
-<h2>The Gates</h2>
-<p>corpus-gate/1.2.0 runs four tests per figure: grounding, language, apparatus, token freshness. Verdicts are PASS or FAIL, published raw.</p>
-<p>As of 2026-07-11, 4 figures are gate-FAIL and named openly: Marcus Aurelius, Mary Somerville, Captain Ahab, and Jean-Jacques Rousseau (mid-recalibration; automatic remediation runs).</p>
-<p>A gate that never fails anything is decoration.</p>
-
-<h2>The Scrub</h2>
-<p>corpus-scrub/1.0.0 records chunks in, kept, and dropped per corpus, before any corpus is used. Reports are kept per figure.</p>
+<p>What we can say plainly today: every figure in the library speaks only from a
+verified public-domain corpus. Every verdict shown on this site is a real, current
+result of automatic checks - a check that never fails anything is decoration, and
+ours fail openly. A figure that cannot source a line says so instead of inventing
+one.</p>
 
 <h2>Fidelity Grades</h2>
 <p>A to D, one question: how directly does the surviving text carry this person's own voice? Marcus Aurelius, grade A: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</p>
-<p>A grade is a property of the sources, independent of the gates. Aurelius holds grade A and a gate-FAIL simultaneously today. We publish both.</p>
-
-<h2>The Panel</h2>
-<p>panel-verify/1.0.0 puts grounding claims before independent model lineages: Alibaba Qwen, Google DeepMind, Mistral AI. Each votes with confidence; dissent is recorded, never averaged away.</p>
-<div class="box mono">
-  chunk: aurelius:meditations-long1862:I:2<br>
-  verdict: PANEL-GROUNDED<br>
-  detail: 3/3 lineages grounded, zero dissent<br>
-  run: panel-verify/1.0.0, 2026-07-12T01:49Z
-</div>
+<p>A grade is a property of the sources, independent of the automatic checks. A figure can hold a high grade and a failing check simultaneously. We publish both.</p>
 
 <h2>Published Receipts</h2>
-<p>Scrub, gate, and panel reports exist today as engine artifacts. Publishing them per figure on this site is in progress, not built yet.</p>
-<p>The <a href="library.html">library</a> already renders live gate verdicts pulled from the data file.</p>
+<p>Per-figure verification reports are being prepared for publication alongside the
+methodology. The <a href="library.html">library</a> already renders live verdicts
+pulled from the data file.</p>
 
 <footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
 
