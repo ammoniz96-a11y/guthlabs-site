@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research - Guth Labs</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Guth Labs</a>
+    <p class="brand-sub">Guth Labs LLC</p>
+    <nav class="tabnav">
+      <a href="figures.html">Figures</a>
+      <a href="verify.html">Verify</a>
+      <a href="library.html">Library</a>
+      <a href="education.html">Education</a>
+      <a href="lab.html">Lab</a>
+      <a class="active" href="research.html">Research</a>
+      <a href="world.html">World</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page">
+
+<h1>Research</h1>
+<p class="lede">The methods behind every grade, gate, and verdict on this site, published so the site can be audited, not just believed.</p>
+
+<h3>The Gates</h3>
+<p>corpus-gate/1.2.0 checks every figure against four tests: grounding (does the mind's speech trace to its corpus), language (does it speak in period voice, not model-speak), apparatus (are scholarly trappings, editions and citations, intact), and token freshness (is its certification current). A gate verdict is PASS or FAIL, published raw.</p>
+<p>As of 2026-07-11, 4 figures are gate-FAIL and named openly: Marcus Aurelius, Mary Somerville, Captain Ahab, and Jean-Jacques Rousseau (mid-recalibration; automatic remediation runs).</p>
+<p>A gate that never fails anything is decoration.</p>
+
+<h3>The Scrub</h3>
+<p>Before a corpus is used it is scrubbed. corpus-scrub/1.0.0 records chunks in, chunks kept, and chunks dropped, per corpus. The reports are artifacts, kept per figure.</p>
+
+<h3>Fidelity Grades</h3>
+<p>Grades run A to D and answer one question: how directly does the surviving text carry this person's own voice? Every figure publishes a basis line alongside its grade. The real example, Marcus Aurelius, grade A: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</p>
+<p>A grade is a property of the sources, not a quality score of the product, and it is independent of the gates. Aurelius holds grade A and a gate-FAIL simultaneously today. We publish both.</p>
+
+<h3>The Panel</h3>
+<p>panel-verify/1.0.0 puts grounding claims in front of a panel of independent model lineages: Alibaba Qwen, Google DeepMind, and Mistral AI. Each votes grounded or not grounded with confidence. Dissent is recorded, never averaged away.</p>
+<div class="box mono">
+  chunk: aurelius:meditations-long1862:I:2<br>
+  verdict: PANEL-GROUNDED<br>
+  detail: 3/3 lineages grounded, zero dissent<br>
+  run: panel-verify/1.0.0, 2026-07-12T01:49Z
+</div>
+<p>Three families that share no training pipeline agreeing is evidence. One model agreeing with itself is not.</p>
+
+<h3>Published Receipts</h3>
+<p>The underlying reports, scrub, gate, panel, per figure, exist today as engine artifacts. Publishing them on this site, per figure, is in progress and not built yet.</p>
+<p>The <a href="library.html">library</a> table already renders live gate verdicts and chunk counts pulled from the data file.</p>
+
+<footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
+
+</div>
+</body>
+</html>

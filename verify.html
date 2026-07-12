@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify - Guth Labs</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Guth Labs</a>
+    <p class="brand-sub">Guth Labs LLC</p>
+    <nav class="tabnav">
+      <a href="figures.html">Figures</a>
+      <a href="verify.html" class="active">Verify</a>
+      <a href="library.html">Library</a>
+      <a href="education.html">Education</a>
+      <a href="lab.html">Lab</a>
+      <a href="research.html">Research</a>
+      <a href="world.html">World</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page">
+
+<h1>Verify</h1>
+<p class="lede">Verification is the product, in two tiers. Paste a quote against a corpus and get VERBATIM or FAIL back. Submit a claim and get a full adversarial verification run. One of these runs in our engine today. The other is the roadmap. This page says plainly which is which.</p>
+
+<h3>Tier 1 - Verbatim (the citator)</h3>
+<p>The citator takes a quote and a corpus or a chronicle entry and returns VERBATIM or FAIL, with the divergence shown, in seconds.</p>
+<p>Honest state: the citator runs in our engine today. It is not a demo. corpus-gate/1.2.0 checks grounding, language, apparatus, and token freshness on every figure before anything publishes, and corpus-scrub/1.0.0 records what was scraped, kept, and dropped for each corpus. Every figure page and every world.guthlabs.ai post passes through it before publication. What is not built yet: the paste-a-quote box on this page itself. Coming.</p>
+<p>Gates fail openly, not quietly. As of 2026-07-11, four figures sit at gate-FAIL and are named here rather than hidden: Marcus Aurelius, Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. All four are mid-recalibration, with automatic remediation running.</p>
+
+<div class="box">
+<p class="mono">quote checked: "The obstacle is the way"</p>
+<p class="mono">corpus: Marcus Aurelius, Meditations, 1862 George Long translation</p>
+<p class="mono">result: FAIL</p>
+<p class="mono">divergence: the phrase appears nowhere in the corpus. It is a modern book title, not a sentence Aurelius wrote.</p>
+<p class="mono">date: 2026-07-08</p>
+</div>
+
+<p>The citator refused the most famous "Aurelius quote" on the internet. Free when it ships here, because the check itself is the best advertisement.</p>
+
+<h3>Tier 2 - Any claim</h3>
+<p>This tier is planned, not built. It is the BasedClaims engine reborn. BasedClaims was the company's founding project, started in April 2026 on the second day of coding, built on one idea: credibility through citation. It scraped 57,242 sources and extracted roughly 600,000 claims. Today's citator code has no documented descent from that BasedClaims code. It is a thematic ancestor, not a literal lineage.</p>
+<p>The planned run is a pipeline:</p>
+<ol>
+<li>Source fan-out: pull every available source that bears on the claim.</li>
+<li>Credibility weighing: weigh sources by reliability, not just by count.</li>
+<li>Adversarial refuters: models whose only job is to try to kill the claim.</li>
+<li>Verdict: a confidence level, every receipt attached, and an honest "insufficient evidence" result when that is the truth.</li>
+</ol>
+<p>The difference from legacy fact-check sites: on demand instead of assigned, any claim instead of a chosen slate, minutes instead of weeks, and the whole process shown, not just a conclusion. Every source pulled, every refutation attempted, and what evidence would change the verdict, all visible. This is the method our own agent fleet already runs internally every day. Tier 2 is that method, productized.</p>
+
+<h3>Lanes</h3>
+<p>Two lanes, no numbers attached. A queued lane runs on our own hardware and is free. An instant lane runs deep verification on demand and is paid, metered by use. The free lane is a standing law, not a promotion.</p>
+
+<h3>Why trust a verifier</h3>
+<p>You should not trust it. You should check it. Every verdict ships with its receipts, and the methods behind them are documented on the <a href="research.html">Research</a> page. The named-failures policy that applies to figures applies here too: a verifier that hides its own misses is not one worth using.</p>
+
+<footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
+
+</div>
+</body>
+</html>

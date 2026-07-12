@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library - Guth Labs</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Guth Labs</a>
+    <p class="brand-sub">Guth Labs LLC</p>
+    <nav class="tabnav">
+      <a href="figures.html">Figures</a>
+      <a href="verify.html">Verify</a>
+      <a class="active" href="library.html">Library</a>
+      <a href="education.html">Education</a>
+      <a href="lab.html">Lab</a>
+      <a href="research.html">Research</a>
+      <a href="world.html">World</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page">
+
+<h1>Library</h1>
+<p class="lede">Every mind we build is built from something, and this page lists it: edition, provenance, license basis, chunk counts, scrub and gate results, per corpus, honest, including failures.</p>
+
+<h3>What a corpus record holds</h3>
+<ul>
+  <li>The source work and edition: a named translation with its year.</li>
+  <li>The license basis: public domain.</li>
+  <li>What the scrub kept and dropped: corpus-scrub/1.0.0 records chunks in, kept, and dropped.</li>
+  <li>The current gate verdict: corpus-gate/1.2.0 checks grounding, language, apparatus, and token freshness.</li>
+</ul>
+<p>Grades and gate verdicts can move. This table renders the live data file, not copy.</p>
+
+<h3>The catalog</h3>
+<p>As of 2026-07-11 the catalog holds 43 minds: 29 grade A, 11 grade B, 3 pending. It also holds 4 named gate-FAILs: Marcus Aurelius, Mary Somerville, Captain Ahab, and Jean-Jacques Rousseau (mid-recalibration; automatic remediation runs).</p>
+
+<div id="catalog-container">
+  <table id="catalog-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Kind</th>
+        <th>Era/Edition</th>
+        <th>Grade</th>
+        <th>Chunks kept</th>
+        <th>Gate</th>
+      </tr>
+    </thead>
+    <tbody id="catalog-body">
+    </tbody>
+  </table>
+  <p id="catalog-fallback" class="mono" hidden>The catalog could not load. The data file is data/figures.json; the gallery at gallery.html lists every mind.</p>
+</div>
+<noscript>
+  <p class="mono">The catalog could not load. The data file is data/figures.json; the gallery at gallery.html lists every mind.</p>
+</noscript>
+
+<h3>Why an honest catalog</h3>
+<p>BasedClaims, the company's founding project, scraped 57,242 sources and extracted roughly 600,000 claims in April 2026. That instinct survives here as a catalog that publishes its receipts instead of its size. See <a href="research.html">Research</a> for the methods and <a href="gallery.html">the gallery</a> for the minds themselves.</p>
+
+<footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
+
+</div>
+<script>
+(function () {
+  fetch('./data/figures.json')
+    .then(function (r) {
+      if (!r.ok) throw new Error('fetch failed');
+      return r.json();
+    })
+    .then(function (data) {
+      var body = document.getElementById('catalog-body');
+      data.forEach(function (fig) {
+        var tr = document.createElement('tr');
+        var scrub = fig.verification && fig.verification.machine && fig.verification.machine.corpusScrub;
+        var gate = fig.verification && fig.verification.machine && fig.verification.machine.corpusGate;
+        var chunksKept = (scrub && scrub.chunks_kept !== undefined && scrub.chunks_kept !== null) ? scrub.chunks_kept : '-';
+        var gateVerdict = (gate && gate.verdict) ? gate.verdict : '-';
+        [fig.displayName || '-', fig.kind || '-', fig.era || '-', fig.grade || '-', chunksKept, gateVerdict].forEach(function (val) {
+          var td = document.createElement('td');
+          td.textContent = val;
+          tr.appendChild(td);
+        });
+        body.appendChild(tr);
+      });
+    })
+    .catch(function () {
+      document.getElementById('catalog-table').hidden = true;
+      document.getElementById('catalog-fallback').hidden = false;
+    });
+})();
+</script>
+
+</body>
+</html>

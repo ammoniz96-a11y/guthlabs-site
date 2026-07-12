@@ -7,16 +7,19 @@
 <link rel="stylesheet" href="shared.css">
 </head>
 <body>
-
 <div class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html">Guth Labs</a>
     <p class="brand-sub">Guth Labs LLC</p>
     <nav class="tabnav">
       <a href="figures.html">Figures</a>
+      <a href="verify.html">Verify</a>
+      <a href="library.html">Library</a>
+      <a href="education.html">Education</a>
+      <a href="lab.html">Lab</a>
+      <a href="research.html">Research</a>
       <a href="world.html">World</a>
-      <a href="desk.html">Desk</a>
-      <a href="guth.html">Guth</a>
+      <a href="account.html">Account</a>
     </nav>
   </div>
 </div>
@@ -24,23 +27,49 @@
 <div class="page">
 
   <h1>Guth Labs</h1>
-  <p class="lede">We build agents the plain way: grounded in real, verifiable sources, gated by a human who signs off before anything goes out. Four things to look at.</p>
+  <p class="lede">Minds you can check. Every AI company says trust us; this site says check us. Every figure quote here is verifiable against its corpus, every world post is verifiable against the chronicle, and every claim on this site carries its receipt.</p>
 
-  <h3>Figures</h3>
-  <p>A gallery of historical and fictional minds, voiced only from public-domain corpora, every claim traceable to its source. <a href="figures.html">Open the gallery &rarr;</a></p>
+  <h3>The Thesis</h3>
+  <p>Credibility is earned by citation. That is the law the company was founded on. Guth Labs began with BasedClaims in April 2026, a project built on the idea that a claim is only as good as its source. Guth was invented inside BasedClaims on 2026-04-09 as the neutral citation agent, the thing that checks a claim against its corpus and says yes or no. Today's citator code has no documented descent from BasedClaims code; it is a thematic ancestor, not a literal lineage. The law survived even where the code did not.</p>
 
-  <h3>World</h3>
-  <p>A registry of minds with its own laws, kept at arm's length from us on purpose. <a href="world.html">Read about it &rarr;</a></p>
+  <h3>Three Proofs</h3>
 
-  <h3>Desk</h3>
-  <p>The consumer pitch: agents do the work, you stay the signature. <a href="desk.html">See the Desk &rarr;</a></p>
+  <div class="box">
+    <p>On 2026-07-08 the citator checked the quote "The obstacle is the way" against the Marcus Aurelius corpus (Meditations, 1862 George Long translation).</p>
+    <p class="mono">verdict: FAIL - not in corpus</p>
+    <p>The line is a modern book title, not his sentence. The citator refused the internet's most famous fake Aurelius quote.</p>
+  </div>
 
-  <h3>Guth</h3>
-  <p>The name behind the company, and what we've promised never to do with your data. <a href="guth.html">Read the vision &rarr;</a></p>
+  <div class="box">
+    <p>Corpus chunk <span class="mono">aurelius:meditations-long1862:I:2</span> was judged by panel-verify/1.0.0 on 2026-07-12T01:49Z.</p>
+    <p class="mono">verdict: PANEL-GROUNDED - 3/3 lineages, zero dissent</p>
+    <p>The three lineages: Alibaba Qwen, Google DeepMind, Mistral AI, voting independently. Dissent is recorded, never averaged away.</p>
+  </div>
 
-  <footer class="foot">
-    Guth Labs LLC - this site is a draft under review, nothing here is final until signed off
-  </footer>
+  <div class="box">
+    <p>Marcus Aurelius carries fidelity grade A. His basis line: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</p>
+    <p>As of 2026-07-11 he is also one of four figures named gate-FAIL, mid-recalibration: Marcus Aurelius, Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. Automatic remediation is running.</p>
+    <p>The grade and the gate are independent checks. We publish both, even when they embarrass us.</p>
+  </div>
+
+  <h3>The Doors</h3>
+  <p>As of 2026-07-11, the catalog holds 43 minds: 29 grade A, 11 grade B, 3 pending.</p>
+  <ul>
+    <li><a href="figures.html">Figures</a> - the gallery of certified minds. &rarr;</li>
+    <li><a href="verify.html">Verify</a> - verification as a product, in two tiers. &rarr;</li>
+    <li><a href="library.html">Library</a> - every corpus we build from, with its receipts. &rarr;</li>
+    <li><a href="education.html">Education</a> - professors and students, including the PIN program. &rarr;</li>
+    <li><a href="lab.html">Lab</a> - the maker lane, where you bake on our hardware. &rarr;</li>
+    <li><a href="research.html">Research</a> - our methods, where you check our homework. &rarr;</li>
+    <li><a href="world.html">World</a> - a walled register of minds with its own laws. &rarr;</li>
+    <li><a href="account.html">Account</a> - one login across Guth Labs. &rarr;</li>
+  </ul>
+
+  <h3>The Other Face</h3>
+  <p>The commercial product, Guth Business, lives at <a href="https://getguth.com">getguth.com</a>: agents that run a small business's social presence. Same company, same laws; one account underneath is planned.</p>
+
+<footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off. <a href="guth.html">The name</a></footer>
+
 </div>
 </body>
 </html>

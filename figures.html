@@ -7,16 +7,19 @@
 <link rel="stylesheet" href="shared.css">
 </head>
 <body>
-
 <div class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="index.html">Guth Labs</a>
     <p class="brand-sub">Guth Labs LLC</p>
     <nav class="tabnav">
-      <a href="figures.html" class="active">Figures</a>
+      <a class="active" href="figures.html">Figures</a>
+      <a href="verify.html">Verify</a>
+      <a href="library.html">Library</a>
+      <a href="education.html">Education</a>
+      <a href="lab.html">Lab</a>
+      <a href="research.html">Research</a>
       <a href="world.html">World</a>
-      <a href="desk.html">Desk</a>
-      <a href="guth.html">Guth</a>
+      <a href="account.html">Account</a>
     </nav>
   </div>
 </div>
@@ -24,21 +27,41 @@
 <div class="page">
 
   <h1>Figures</h1>
-  <p class="lede">Corpus-grounded historical and fictional minds. Every figure is provenance-gated: voiced only from a byte-verified public-domain edition, never from generated text, and every figure carries a visible fidelity grade. A quote-verifier refuses fabrication rather than paper over a gap.</p>
+  <p class="lede">Historical and fictional minds, each certified against the only thing we trust: its own surviving text. As of 2026-07-11 the catalog holds 43 minds. The gallery renders the live count.</p>
 
-  <p>The gallery holds 40 figures today - philosophers, presidents, naturalists, novel characters - each with its named edition, license basis, and a machine-verification record you can inspect. Nothing on the figure pages is a transcript of a figure speaking; the conversation layer is a separate, later phase. What exists now is the library and its receipts.</p>
+  <p><a class="cta" href="gallery.html">Open the gallery</a></p>
 
-  <p><a class="cta" href="gallery.html">Open the Figures gallery</a></p>
+  <h3>What a certified mind carries</h3>
+  <p>Every figure in the catalog ships with the same record. Nothing is added to the gallery without it.</p>
+  <ul>
+    <li>Its corpus: the exact work and edition it is built from, with license basis.</li>
+    <li>Its fidelity grade (A to D) with a published basis line. Marcus Aurelius, grade A: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world."</li>
+    <li>Its gate token: when it was certified and what it passed, checked by corpus-gate/1.2.0.</li>
+    <li>Verification receipts: scrub, gate, and panel reports. See <a href="research.html">Research</a> for methods.</li>
+  </ul>
+  <div class="box">
+    <p class="mono">panel-verify/1.0.0, run 2026-07-12T01:49Z: corpus chunk aurelius:meditations-long1862:I:2 judged PANEL-GROUNDED, "3/3 lineages grounded, zero dissent." Three independent model lineages vote: Alibaba Qwen, Google DeepMind, Mistral AI. Dissent is recorded, never averaged away.</p>
+  </div>
+  <p>As of 2026-07-11, 4 figures are gate-FAIL and named openly: Marcus Aurelius, Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. All four are mid-recalibration; remediation runs automatically. The FAIL is shown, not hidden.</p>
 
-  <h3>What "grade" means</h3>
-  <p>Every figure carries an A-D voice-fidelity grade, always shown, never buried. A grade is a human judgement with written reasons attached: how close the corpus is to the figure's own first-person voice, versus something filtered through an editor, a translator, or another character's narration. Fictional figures get the same honesty requirement - where a character's voice lives inside someone else's telling, the grade basis says so.</p>
+  <h3>Check any quote</h3>
+  <p>Paste any quote a figure gave you and get VERBATIM or FAIL against its corpus, with the divergence shown.</p>
+  <div class="box">
+    <p class="mono">Citator rejection, 2026-07-08: "The obstacle is the way" checked against the Marcus Aurelius corpus (Meditations, 1862 George Long translation). Result: FAIL. It appears nowhere in the corpus. It is a modern book title, not his sentence.</p>
+  </div>
+  <p>This is the citator running today, in the engine. It is how the line above got rejected. Full receipt on <a href="verify.html">Verify</a>. An inline check box on each figure's own page is coming and not built yet.</p>
 
-  <h3>What "verified" means</h3>
-  <p>A separate ladder from the grade: automatic machine checks run on every figure (source byte-verified against its public edition, an adversarial bait suite scored, citations resolved back to the corpus). A further tier records when the maintaining engine has completed its own documented review. A third tier, reserved for a verified human scholar, is not yet granted to any figure - the gallery says so plainly rather than implying more than is true.</p>
+  <h3>The arena (planned)</h3>
+  <p>Debates between minds, voiced, are planned. The citator will run live on every quoted line as the debate happens. This is a spec today, not a built feature on this site.</p>
 
-  <footer class="foot">
-    Guth Labs LLC - the gallery itself lives at <a href="gallery.html">gallery.html</a> and is unchanged by this page
-  </footer>
+  <h3>Request a figure (planned)</h3>
+  <p>Requesting the mind your work needs is planned and not built yet. Every requested figure would pass the same gates as the catalog before it ships. PIN holders (see <a href="education.html">Education</a>) are prompted to request figures in their own field.</p>
+
+  <h3>Owning a figure</h3>
+  <p>The ownership model, structurally: buy a figure once and it is unlocked forever, or hold an all-access subscription across the catalog. Expensive interactions, such as voice conversations, are metered separately. A bought figure becomes an agent on your desk across Guth Labs, tied to one account (see <a href="account.html">Account</a>). Purchasing is coming and not yet live on this site.</p>
+
+<footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off</footer>
+
 </div>
 </body>
 </html>

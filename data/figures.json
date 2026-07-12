@@ -1,882 +1,1484 @@
 [
-  {
-    "slug": "aurelius",
-    "displayName": "Marcus Aurelius",
-    "kind": "historical",
-    "era": "1862 translation",
-    "grade": "A",
-    "gradeBasis": "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+ {
+  "slug": "aurelius",
+  "displayName": "Marcus Aurelius",
+  "kind": "historical",
+  "era": "1862 translation",
+  "grade": "A",
+  "gradeBasis": "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "FAIL",
+     "ts": "2026-07-11T20:56:23.834Z",
+     "grounding": true,
+     "language": false,
+     "apparatus": true,
+     "tokenFresh": false
     },
-    "edition": "George Long 1862, Project Gutenberg #15877",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 489,
-    "exportName": "philosopher-aurelius",
-    "oneLine": "Marcus Aurelius, whose Meditations are his private notebooks, written to himself and never intended for publication - the least performed voice in the ancient world."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:39:12.546Z",
+     "chunks_in": 489,
+     "chunks_kept": 489,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "seneca",
-    "displayName": "Seneca",
-    "kind": "historical",
-    "era": "1917-1925 publication",
-    "grade": "A",
-    "gradeBasis": "Moral Letters to Lucilius are his own voice, 124 real letters of Stoic counsel, first person throughout.",
-    "verification": {
-      "machine": {
-        "baits": "10/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "George Long 1862, Project Gutenberg #15877",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 489,
+  "exportName": "philosopher-aurelius",
+  "oneLine": "Marcus Aurelius, whose Meditations are his private notebooks, written to himself and never intended for publication - the least performed voice in the ancient world."
+ },
+ {
+  "slug": "seneca",
+  "displayName": "Seneca",
+  "kind": "historical",
+  "era": "1917-1925 publication",
+  "grade": "A",
+  "gradeBasis": "Moral Letters to Lucilius are his own voice, 124 real letters of Stoic counsel, first person throughout.",
+  "verification": {
+   "machine": {
+    "baits": "10/10",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:46.475Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Richard Mott Gummere, Loeb 1917-1925, via en.wikisource.org",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 320,
-    "exportName": "philosopher-seneca",
-    "oneLine": "Seneca, whose Moral Letters to Lucilius are 124 real letters of Stoic counsel written to his friend Lucilius, first person throughout."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:34.314Z",
+     "chunks_in": 320,
+     "chunks_kept": 320,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "socrates",
-    "displayName": "Socrates",
-    "kind": "historical",
-    "era": "1642 translation",
-    "grade": "B",
-    "gradeBasis": "Socrates wrote nothing; the corpus is Plato's Socrates - his character voiced by Plato in the early Socratic dialogues (Euthyphro, Meno, Apology, Crito, Gorgias, tr.",
-    "verification": {
-      "machine": {
-        "baits": "10/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
-    },
-    "edition": "Benjamin Jowett translation, Project Gutenberg (Euthyphro #1642, Meno #1643, Apology #1656, Crito #1657, Gorgias #1672)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 82,
-    "exportName": "philosopher-socrates",
-    "oneLine": "Socrates as Plato staged him in the early dialogues (Euthyphro, Meno, Apology, Crito, Gorgias, tr. Jowett) - his own speech turns only, a character voiced by another, disclosed as such."
+  "edition": "Richard Mott Gummere, Loeb 1917-1925, via en.wikisource.org",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 320,
+  "exportName": "philosopher-seneca",
+  "oneLine": "Seneca, whose Moral Letters to Lucilius are 124 real letters of Stoic counsel written to his friend Lucilius, first person throughout."
+ },
+ {
+  "slug": "socrates",
+  "displayName": "Socrates",
+  "kind": "historical",
+  "era": "1642 translation",
+  "grade": "B",
+  "gradeBasis": "Socrates wrote nothing; the corpus is Plato's Socrates - his character voiced by Plato in the early Socratic dialogues (Euthyphro, Meno, Apology, Crito, Gorgias, tr.",
+  "verification": {
+   "machine": {
+    "baits": "10/10",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "douglass",
-    "displayName": "Frederick Douglass",
-    "kind": "historical",
-    "era": "1845 publication",
-    "grade": "A",
-    "gradeBasis": "First-person autobiography, his own voice, no traps.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Benjamin Jowett translation, Project Gutenberg (Euthyphro #1642, Meno #1643, Apology #1656, Crito #1657, Gorgias #1672)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 82,
+  "exportName": "philosopher-socrates",
+  "oneLine": "Socrates as Plato staged him in the early dialogues (Euthyphro, Meno, Apology, Crito, Gorgias, tr. Jowett) - his own speech turns only, a character voiced by another, disclosed as such."
+ },
+ {
+  "slug": "douglass",
+  "displayName": "Frederick Douglass",
+  "kind": "historical",
+  "era": "1845 publication",
+  "grade": "A",
+  "gradeBasis": "First-person autobiography, his own voice, no traps.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:02.457Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #23 (1845 Narrative)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 63,
-    "exportName": "orator-douglass",
-    "oneLine": "Frederick Douglass, voiced entirely from Narrative of the Life of Frederick Douglass, 1845."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:03:59.217Z",
+     "chunks_in": 63,
+     "chunks_kept": 63,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "machiavelli",
-    "displayName": "Machiavelli",
-    "kind": "historical",
-    "era": "1908 translation",
-    "grade": "A",
-    "gradeBasis": "Marriott edition includes his personal letters (e.g. the 1513 letter to Vettori).",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #23 (1845 Narrative)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 63,
+  "exportName": "orator-douglass",
+  "oneLine": "Frederick Douglass, voiced entirely from Narrative of the Life of Frederick Douglass, 1845."
+ },
+ {
+  "slug": "machiavelli",
+  "displayName": "Machiavelli",
+  "kind": "historical",
+  "era": "1908 translation",
+  "grade": "A",
+  "gradeBasis": "Marriott edition includes his personal letters (e.g. the 1513 letter to Vettori).",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T22:08:53.142Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "W. K. Marriott 1908, Project Gutenberg #1232",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 75,
-    "exportName": "statesman-machiavelli",
-    "oneLine": "Machiavelli, voiced entirely from The Prince, tr. W. K. Marriott 1908."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T22:05:07.920Z",
+     "chunks_in": 75,
+     "chunks_kept": 67,
+     "dropped": 8,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "grant",
-    "displayName": "Ulysses S. Grant",
-    "kind": "historical",
-    "era": "1885 publication",
-    "grade": "A",
-    "gradeBasis": "Full first-person memoir, dictated on his deathbed.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "W. K. Marriott 1908, Project Gutenberg #1232",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 75,
+  "exportName": "statesman-machiavelli",
+  "oneLine": "Machiavelli, voiced entirely from The Prince, tr. W. K. Marriott 1908."
+ },
+ {
+  "slug": "grant",
+  "displayName": "Ulysses S. Grant",
+  "kind": "historical",
+  "era": "1885 publication",
+  "grade": "A",
+  "gradeBasis": "Full first-person memoir, dictated on his deathbed.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T21:22:08.733Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #4367 (complete)",
-    "licenseBasis": "pre-1930 US publication (1885/1886), public domain",
-    "chunkCount": 402,
-    "exportName": "general-grant",
-    "oneLine": "Ulysses S. Grant, voiced entirely from Personal Memoirs of U. S. Grant, 1885."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:01:16.992Z",
+     "chunks_in": 402,
+     "chunks_kept": 399,
+     "dropped": 3,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "thoreau",
-    "displayName": "Thoreau",
-    "kind": "historical",
-    "era": "1854 publication",
-    "grade": "A",
-    "gradeBasis": "Deep first-person daily corpus.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #4367 (complete)",
+  "licenseBasis": "pre-1930 US publication (1885/1886), public domain",
+  "chunkCount": 402,
+  "exportName": "general-grant",
+  "oneLine": "Ulysses S. Grant, voiced entirely from Personal Memoirs of U. S. Grant, 1885."
+ },
+ {
+  "slug": "thoreau",
+  "displayName": "Thoreau",
+  "kind": "historical",
+  "era": "1854 publication",
+  "grade": "A",
+  "gradeBasis": "Deep first-person daily corpus.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:54.460Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #205 (Walden)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 177,
-    "exportName": "naturalist-thoreau",
-    "oneLine": "Thoreau, voiced entirely from Walden, 1854."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:46.846Z",
+     "chunks_in": 177,
+     "chunks_kept": 177,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "roosevelt-t",
-    "displayName": "Theodore Roosevelt",
-    "kind": "historical",
-    "era": "1913 publication",
-    "grade": "A",
-    "gradeBasis": "Full first-person autobiography, pre-1930, clean.",
-    "verification": {
-      "machine": {
-        "baits": "9/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #205 (Walden)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 177,
+  "exportName": "naturalist-thoreau",
+  "oneLine": "Thoreau, voiced entirely from Walden, 1854."
+ },
+ {
+  "slug": "roosevelt-t",
+  "displayName": "Theodore Roosevelt",
+  "kind": "historical",
+  "era": "1913 publication",
+  "grade": "A",
+  "gradeBasis": "Full first-person autobiography, pre-1930, clean.",
+  "verification": {
+   "machine": {
+    "baits": "9/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T00:52:22.638Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #3335",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 335,
-    "exportName": "president-roosevelt",
-    "oneLine": "Theodore Roosevelt, voiced entirely from Theodore Roosevelt: An Autobiography, 1913."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T00:35:32.044Z",
+     "chunks_in": 335,
+     "chunks_kept": 332,
+     "dropped": 3,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "montaigne",
-    "displayName": "Montaigne",
-    "kind": "historical",
-    "era": "pre-1930 translation",
-    "grade": "A",
-    "gradeBasis": "Full Essays, deeply first-person self-examination.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #3335",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 335,
+  "exportName": "president-roosevelt",
+  "oneLine": "Theodore Roosevelt, voiced entirely from Theodore Roosevelt: An Autobiography, 1913."
+ },
+ {
+  "slug": "montaigne",
+  "displayName": "Montaigne",
+  "kind": "historical",
+  "era": "pre-1930 translation",
+  "grade": "A",
+  "gradeBasis": "Full Essays, deeply first-person self-examination.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T22:54:30.312Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Charles Cotton translation, Hazlitt revision, Project Gutenberg #3600",
-    "licenseBasis": "translation pre-1930 (Cotton 1685 / Hazlitt 1877), public domain",
-    "chunkCount": 785,
-    "exportName": "essayist-montaigne",
-    "oneLine": "Montaigne, voiced entirely from Essays, tr. Charles Cotton (Hazlitt revision)."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T22:16:06.524Z",
+     "chunks_in": 785,
+     "chunks_kept": 758,
+     "dropped": 27,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "pepys",
-    "displayName": "Samuel Pepys",
-    "kind": "historical",
-    "era": "1893-1899 edition",
-    "grade": "A",
-    "gradeBasis": "Richest first-person day-to-day corpus on the list.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Charles Cotton translation, Hazlitt revision, Project Gutenberg #3600",
+  "licenseBasis": "translation pre-1930 (Cotton 1685 / Hazlitt 1877), public domain",
+  "chunkCount": 785,
+  "exportName": "essayist-montaigne",
+  "oneLine": "Montaigne, voiced entirely from Essays, tr. Charles Cotton (Hazlitt revision)."
+ },
+ {
+  "slug": "pepys",
+  "displayName": "Samuel Pepys",
+  "kind": "historical",
+  "era": "1893-1899 edition",
+  "grade": "A",
+  "gradeBasis": "Richest first-person day-to-day corpus on the list.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T00:35:30.620Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Henry B. Wheatley edition 1893-1899, Project Gutenberg #4200 (complete)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 1903,
-    "exportName": "diarist-pepys",
-    "oneLine": "Samuel Pepys, voiced entirely from Diary of Samuel Pepys, Wheatley edition 1893-1899."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T23:05:49.085Z",
+     "chunks_in": 1903,
+     "chunks_kept": 1829,
+     "dropped": 74,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "augustine",
-    "displayName": "Augustine",
-    "kind": "historical",
-    "era": "pre-1930 translation",
-    "grade": "A",
-    "gradeBasis": "Confessions is first-person throughout.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Henry B. Wheatley edition 1893-1899, Project Gutenberg #4200 (complete)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 1903,
+  "exportName": "diarist-pepys",
+  "oneLine": "Samuel Pepys, voiced entirely from Diary of Samuel Pepys, Wheatley edition 1893-1899."
+ },
+ {
+  "slug": "augustine",
+  "displayName": "Augustine",
+  "kind": "historical",
+  "era": "pre-1930 translation",
+  "grade": "A",
+  "gradeBasis": "Confessions is first-person throughout.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T00:58:09.617Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "E. B. Pusey translation, Project Gutenberg #3296",
-    "licenseBasis": "translation pre-1930, translator long dead, public domain",
-    "chunkCount": 163,
-    "exportName": "theologian-augustine",
-    "oneLine": "Augustine, voiced entirely from The Confessions, tr. E. B. Pusey."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T00:58:02.864Z",
+     "chunks_in": 163,
+     "chunks_kept": 163,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "dubois",
-    "displayName": "W. E. B. Du Bois",
-    "kind": "historical",
-    "era": "1903 publication",
-    "grade": "A",
-    "gradeBasis": "First-person essays, his own voice, clean for the 1903 work specifically.",
-    "verification": {
-      "machine": {
-        "baits": "9/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "E. B. Pusey translation, Project Gutenberg #3296",
+  "licenseBasis": "translation pre-1930, translator long dead, public domain",
+  "chunkCount": 163,
+  "exportName": "theologian-augustine",
+  "oneLine": "Augustine, voiced entirely from The Confessions, tr. E. B. Pusey."
+ },
+ {
+  "slug": "dubois",
+  "displayName": "W. E. B. Du Bois",
+  "kind": "historical",
+  "era": "1903 publication",
+  "grade": "A",
+  "gradeBasis": "First-person essays, his own voice, clean for the 1903 work specifically.",
+  "verification": {
+   "machine": {
+    "baits": "9/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:08.130Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #408 (1903)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 102,
-    "exportName": "scholar-dubois",
-    "oneLine": "W. E. B. Du Bois, voiced entirely from The Souls of Black Folk, 1903."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:02.693Z",
+     "chunks_in": 102,
+     "chunks_kept": 102,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "somerville",
-    "displayName": "Mary Somerville",
-    "kind": "historical",
-    "era": "1873 publication",
-    "grade": "B",
-    "gradeBasis": "Genuinely first-person recollections plus her actual correspondence, but compiled and edited posthumously by her daughter Martha - curated rather than raw, disclose (same shape as the Victoria discount, milder because the letters are primary).",
-    "verification": {
-      "machine": {
-        "baits": "10/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #408 (1903)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 102,
+  "exportName": "scholar-dubois",
+  "oneLine": "W. E. B. Du Bois, voiced entirely from The Souls of Black Folk, 1903."
+ },
+ {
+  "slug": "somerville",
+  "displayName": "Mary Somerville",
+  "kind": "historical",
+  "era": "1873 publication",
+  "grade": "B",
+  "gradeBasis": "Genuinely first-person recollections plus her actual correspondence, but compiled and edited posthumously by her daughter Martha - curated rather than raw, disclose (same shape as the Victoria discount, milder because the letters are primary).",
+  "verification": {
+   "machine": {
+    "baits": "10/10",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "FAIL",
+     "ts": "2026-07-11T20:55:51.132Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": false,
+     "tokenFresh": false
     },
-    "edition": "Project Gutenberg #27747 (published 1873, posthumous)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 134,
-    "exportName": "scientist-somerville",
-    "oneLine": "Mary Somerville, voiced entirely from Personal Recollections of Mary Somerville, 1873."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:20:09.345Z",
+     "chunks_in": 128,
+     "chunks_kept": 128,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "dracula",
-    "displayName": "Count Dracula",
-    "kind": "fictional",
-    "era": "1897 publication",
-    "grade": "B",
-    "gradeBasis": "Fictional-character corpus: the Count's own voice lives in dialogue inside the other characters' journals - the persona must disclose that the narration is not his.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
-    },
-    "edition": "Project Gutenberg #345",
-    "licenseBasis": "US copyright formalities failure at publication; public domain",
-    "chunkCount": 213,
-    "exportName": "fictional-dracula",
-    "oneLine": "Count Dracula, voiced entirely from Dracula, Bram Stoker, 1897."
+  "edition": "Project Gutenberg #27747 (published 1873, posthumous)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 134,
+  "exportName": "scientist-somerville",
+  "oneLine": "Mary Somerville, voiced entirely from Personal Recollections of Mary Somerville, 1873."
+ },
+ {
+  "slug": "dracula",
+  "displayName": "Count Dracula",
+  "kind": "fictional",
+  "era": "1897 publication",
+  "grade": "B",
+  "gradeBasis": "Fictional-character corpus: the Count's own voice lives in dialogue inside the other characters' journals - the persona must disclose that the narration is not his.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "creature",
-    "displayName": "Frankenstein's Creature",
-    "kind": "fictional",
-    "era": "1831 publication",
-    "grade": "A",
-    "gradeBasis": "The creature narrates his own story first-person in the middle volume - a real first-person core inside Walton's and Victor's frame narratives; disclose the frame.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #345",
+  "licenseBasis": "US copyright formalities failure at publication; public domain",
+  "chunkCount": 213,
+  "exportName": "fictional-dracula",
+  "oneLine": "Count Dracula, voiced entirely from Dracula, Bram Stoker, 1897."
+ },
+ {
+  "slug": "creature",
+  "displayName": "Frankenstein's Creature",
+  "kind": "fictional",
+  "era": "1831 publication",
+  "grade": "A",
+  "gradeBasis": "The creature narrates his own story first-person in the middle volume - a real first-person core inside Walton's and Victor's frame narratives; disclose the frame.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:03:33.099Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #84 (the commonly circulated 1831 revised text)",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 103,
-    "exportName": "fictional-creature",
-    "oneLine": "Frankenstein's Creature, voiced entirely from Frankenstein, Mary Shelley (1831 text)."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T00:58:16.070Z",
+     "chunks_in": 103,
+     "chunks_kept": 103,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "alice",
-    "displayName": "Alice",
-    "kind": "fictional",
-    "era": "1865 publication",
-    "grade": "B",
-    "gradeBasis": "Alice's voice is dialogue and reported thought within Carroll's third-person narration - disclose.",
-    "verification": {
-      "machine": {
-        "baits": "9/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
-    },
-    "edition": "Project Gutenberg #11",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 33,
-    "exportName": "fictional-alice",
-    "oneLine": "Alice, voiced entirely from Alice's Adventures in Wonderland, 1865."
+  "edition": "Project Gutenberg #84 (the commonly circulated 1831 revised text)",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 103,
+  "exportName": "fictional-creature",
+  "oneLine": "Frankenstein's Creature, voiced entirely from Frankenstein, Mary Shelley (1831 text)."
+ },
+ {
+  "slug": "alice",
+  "displayName": "Alice",
+  "kind": "fictional",
+  "era": "1865 publication",
+  "grade": "B",
+  "gradeBasis": "Alice's voice is dialogue and reported thought within Carroll's third-person narration - disclose.",
+  "verification": {
+   "machine": {
+    "baits": "9/11",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "ahab",
-    "displayName": "Captain Ahab",
-    "kind": "fictional",
-    "era": "1851 publication",
-    "grade": "A",
-    "gradeBasis": "Ahab's voice is dialogue and soliloquy inside Ishmael's first-person narration - the persona must disclose that Ishmael, not Ahab, tells the story.",
-    "verification": {
-      "machine": {
-        "baits": "8/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #11",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 33,
+  "exportName": "fictional-alice",
+  "oneLine": "Alice, voiced entirely from Alice's Adventures in Wonderland, 1865."
+ },
+ {
+  "slug": "ahab",
+  "displayName": "Captain Ahab",
+  "kind": "fictional",
+  "era": "1851 publication",
+  "grade": "A",
+  "gradeBasis": "Ahab's voice is dialogue and soliloquy inside Ishmael's first-person narration - the persona must disclose that Ishmael, not Ahab, tells the story.",
+  "verification": {
+   "machine": {
+    "baits": "8/10",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.1.0",
+     "verdict": "FAIL",
+     "ts": "2026-07-11T20:15:50.198Z",
+     "grounding": false,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": false
     },
-    "edition": "Project Gutenberg #2701",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 301,
-    "exportName": "fictional-ahab",
-    "oneLine": "Captain Ahab, voiced entirely from Moby-Dick; or, The Whale, 1851."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:39:11.481Z",
+     "chunks_in": 301,
+     "chunks_kept": 298,
+     "dropped": 3,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "elizabeth-bennet",
-    "displayName": "Elizabeth Bennet",
-    "kind": "fictional",
-    "era": "1813 publication",
-    "grade": "B",
-    "gradeBasis": "Elizabeth's voice is dialogue plus Austen's free indirect discourse within third-person narration - disclose.",
-    "verification": {
-      "machine": {
-        "baits": "9/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
-    },
-    "edition": "Project Gutenberg #1342",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 176,
-    "exportName": "fictional-bennet",
-    "oneLine": "Elizabeth Bennet, voiced entirely from Pride and Prejudice, 1813."
+  "edition": "Project Gutenberg #2701",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 301,
+  "exportName": "fictional-ahab",
+  "oneLine": "Captain Ahab, voiced entirely from Moby-Dick; or, The Whale, 1851."
+ },
+ {
+  "slug": "elizabeth-bennet",
+  "displayName": "Elizabeth Bennet",
+  "kind": "fictional",
+  "era": "1813 publication",
+  "grade": "B",
+  "gradeBasis": "Elizabeth's voice is dialogue plus Austen's free indirect discourse within third-person narration - disclose.",
+  "verification": {
+   "machine": {
+    "baits": "9/11",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "odysseus",
-    "displayName": "Odysseus",
-    "kind": "fictional",
-    "era": "1900 translation",
-    "grade": "A",
-    "gradeBasis": "A with Butler SPECIFICALLY (plain readable prose, faithful enough); B if defaulting to Chapman or Pope, whose PD versions are loose adaptations.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #1342",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 176,
+  "exportName": "fictional-bennet",
+  "oneLine": "Elizabeth Bennet, voiced entirely from Pride and Prejudice, 1813."
+ },
+ {
+  "slug": "odysseus",
+  "displayName": "Odysseus",
+  "kind": "fictional",
+  "era": "1900 translation",
+  "grade": "A",
+  "gradeBasis": "A with Butler SPECIFICALLY (plain readable prose, faithful enough); B if defaulting to Chapman or Pope, whose PD versions are loose adaptations.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T23:05:48.002Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Samuel Butler prose translation 1900, Project Gutenberg #1727",
-    "licenseBasis": "translation pre-1930 (1900), public domain",
-    "chunkCount": 151,
-    "exportName": "fictional-odysseus",
-    "oneLine": "Odysseus, voiced entirely from The Odyssey, tr. Samuel Butler 1900."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T22:57:41.634Z",
+     "chunks_in": 151,
+     "chunks_kept": 151,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "gatsby",
-    "displayName": "Jay Gatsby",
-    "kind": "fictional",
-    "era": "1925 publication",
-    "grade": "B",
-    "gradeBasis": "Gatsby is seen entirely through Nick Carraway's first-person narration; his own voice is dialogue only - disclose.",
-    "verification": {
-      "machine": {
-        "baits": "8/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
-    },
-    "edition": "Project Gutenberg #64317 (added post-2021 clearance)",
-    "licenseBasis": "95-year US term from 1925 publication expired Jan 1 2021; public domain",
-    "chunkCount": 63,
-    "exportName": "fictional-gatsby",
-    "oneLine": "Jay Gatsby, voiced entirely from The Great Gatsby, 1925."
+  "edition": "Samuel Butler prose translation 1900, Project Gutenberg #1727",
+  "licenseBasis": "translation pre-1930 (1900), public domain",
+  "chunkCount": 151,
+  "exportName": "fictional-odysseus",
+  "oneLine": "Odysseus, voiced entirely from The Odyssey, tr. Samuel Butler 1900."
+ },
+ {
+  "slug": "gatsby",
+  "displayName": "Jay Gatsby",
+  "kind": "fictional",
+  "era": "1925 publication",
+  "grade": "B",
+  "gradeBasis": "Gatsby is seen entirely through Nick Carraway's first-person narration; his own voice is dialogue only - disclose.",
+  "verification": {
+   "machine": {
+    "baits": "8/10",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "franklin",
-    "displayName": "Benjamin Franklin",
-    "kind": "historical",
-    "era": "pre-1930 edition",
-    "grade": "A",
-    "gradeBasis": "The canonical American autobiography, first-person throughout.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #64317 (added post-2021 clearance)",
+  "licenseBasis": "95-year US term from 1925 publication expired Jan 1 2021; public domain",
+  "chunkCount": 63,
+  "exportName": "fictional-gatsby",
+  "oneLine": "Jay Gatsby, voiced entirely from The Great Gatsby, 1925."
+ },
+ {
+  "slug": "franklin",
+  "displayName": "Benjamin Franklin",
+  "kind": "historical",
+  "era": "pre-1930 edition",
+  "grade": "A",
+  "gradeBasis": "The canonical American autobiography, first-person throughout.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T21:01:16.645Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #148 (standard edition)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 94,
-    "exportName": "founder-franklin",
-    "oneLine": "Benjamin Franklin, voiced entirely from The Autobiography of Benjamin Franklin."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:56:24.068Z",
+     "chunks_in": 94,
+     "chunks_kept": 92,
+     "dropped": 2,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "lincoln",
-    "displayName": "Abraham Lincoln",
-    "kind": "historical",
-    "era": "pre-1930 publication",
-    "grade": "A",
-    "gradeBasis": "Genuine first-person Lincoln - his own speeches, letters, and writings, all pre-1930.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #148 (standard edition)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 94,
+  "exportName": "founder-franklin",
+  "oneLine": "Benjamin Franklin, voiced entirely from The Autobiography of Benjamin Franklin."
+ },
+ {
+  "slug": "lincoln",
+  "displayName": "Abraham Lincoln",
+  "kind": "historical",
+  "era": "pre-1930 publication",
+  "grade": "A",
+  "gradeBasis": "Genuine first-person Lincoln - his own speeches, letters, and writings, all pre-1930.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T22:05:07.381Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Lapsley compilation, Project Gutenberg #3253 (complete, vols 1-7)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 750,
-    "exportName": "president-lincoln",
-    "oneLine": "Abraham Lincoln, voiced entirely from The Papers and Writings of Abraham Lincoln (Lapsley compilation)."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:27:53.481Z",
+     "chunks_in": 750,
+     "chunks_kept": 745,
+     "dropped": 5,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "darwin",
-    "displayName": "Charles Darwin",
-    "kind": "historical",
-    "era": "pre-1930 publication",
-    "grade": "A",
-    "gradeBasis": "Best-in-class scientist corpus: personal first-person memoir voice.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Lapsley compilation, Project Gutenberg #3253 (complete, vols 1-7)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 750,
+  "exportName": "president-lincoln",
+  "oneLine": "Abraham Lincoln, voiced entirely from The Papers and Writings of Abraham Lincoln (Lapsley compilation)."
+ },
+ {
+  "slug": "darwin",
+  "displayName": "Charles Darwin",
+  "kind": "historical",
+  "era": "pre-1930 publication",
+  "grade": "A",
+  "gradeBasis": "Best-in-class scientist corpus: personal first-person memoir voice.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:03:36.771Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #2010",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 32,
-    "exportName": "naturalist-darwin",
-    "oneLine": "Charles Darwin, voiced entirely from The Autobiography of Charles Darwin."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:03:33.352Z",
+     "chunks_in": 32,
+     "chunks_kept": 32,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "mill",
-    "displayName": "John Stuart Mill",
-    "kind": "historical",
-    "era": "1873 publication",
-    "grade": "A",
-    "gradeBasis": "Full intellectual autobiography, first-person.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #2010",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 32,
+  "exportName": "naturalist-darwin",
+  "oneLine": "Charles Darwin, voiced entirely from The Autobiography of Charles Darwin."
+ },
+ {
+  "slug": "mill",
+  "displayName": "John Stuart Mill",
+  "kind": "historical",
+  "era": "1873 publication",
+  "grade": "A",
+  "gradeBasis": "Full intellectual autobiography, first-person.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T22:16:05.954Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #10378",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 146,
-    "exportName": "philosopher-mill",
-    "oneLine": "John Stuart Mill, voiced entirely from Autobiography, John Stuart Mill, 1873."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T22:08:53.368Z",
+     "chunks_in": 146,
+     "chunks_kept": 145,
+     "dropped": 1,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "emerson",
-    "displayName": "Ralph Waldo Emerson",
-    "kind": "historical",
-    "era": "1841 publication",
-    "grade": "A",
-    "gradeBasis": "Strongly-voiced first-person essayist, pre-1930, clean.",
-    "verification": {
-      "machine": {
-        "baits": "9/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #10378",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 146,
+  "exportName": "philosopher-mill",
+  "oneLine": "John Stuart Mill, voiced entirely from Autobiography, John Stuart Mill, 1873."
+ },
+ {
+  "slug": "emerson",
+  "displayName": "Ralph Waldo Emerson",
+  "kind": "historical",
+  "era": "1841 publication",
+  "grade": "A",
+  "gradeBasis": "Strongly-voiced first-person essayist, pre-1930, clean.",
+  "verification": {
+   "machine": {
+    "baits": "9/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:13.002Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #2944 (First Series)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 106,
-    "exportName": "essayist-emerson",
-    "oneLine": "Ralph Waldo Emerson, voiced entirely from Essays: First Series, 1841."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:08.402Z",
+     "chunks_in": 106,
+     "chunks_kept": 106,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "jacobs",
-    "displayName": "Harriet Jacobs",
-    "kind": "historical",
-    "era": "1861 publication",
-    "grade": "A",
-    "gradeBasis": "First-person slave narrative, written by her own hand (published under the pseudonym Linda Brent).",
-    "verification": {
-      "machine": {
-        "baits": "10/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #2944 (First Series)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 106,
+  "exportName": "essayist-emerson",
+  "oneLine": "Ralph Waldo Emerson, voiced entirely from Essays: First Series, 1841."
+ },
+ {
+  "slug": "jacobs",
+  "displayName": "Harriet Jacobs",
+  "kind": "historical",
+  "era": "1861 publication",
+  "grade": "A",
+  "gradeBasis": "First-person slave narrative, written by her own hand (published under the pseudonym Linda Brent).",
+  "verification": {
+   "machine": {
+    "baits": "10/10",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T21:27:52.974Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #11030",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 110,
-    "exportName": "author-jacobs",
-    "oneLine": "Harriet Jacobs, voiced entirely from Incidents in the Life of a Slave Girl, Written by Herself, 1861."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:22:09.128Z",
+     "chunks_in": 110,
+     "chunks_kept": 110,
+     "dropped": 0,
+     "stripped": 1
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "washington-bt",
-    "displayName": "Booker T. Washington",
-    "kind": "historical",
-    "era": "1901 publication",
-    "grade": "A",
-    "gradeBasis": "Full first-person autobiography.",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #11030",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 110,
+  "exportName": "author-jacobs",
+  "oneLine": "Harriet Jacobs, voiced entirely from Incidents in the Life of a Slave Girl, Written by Herself, 1861."
+ },
+ {
+  "slug": "washington-bt",
+  "displayName": "Booker T. Washington",
+  "kind": "historical",
+  "era": "1901 publication",
+  "grade": "A",
+  "gradeBasis": "Full first-person autobiography.",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:10:24.123Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #2376",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 105,
-    "exportName": "educator-washington",
-    "oneLine": "Booker T. Washington, voiced entirely from Up from Slavery: An Autobiography, 1901."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:05:00.747Z",
+     "chunks_in": 104,
+     "chunks_kept": 104,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "nightingale",
-    "displayName": "Florence Nightingale",
-    "kind": "historical",
-    "era": "1859 publication",
-    "grade": "A",
-    "gradeBasis": "First-person didactic voice in her own treatise.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #2376",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 105,
+  "exportName": "educator-washington",
+  "oneLine": "Booker T. Washington, voiced entirely from Up from Slavery: An Autobiography, 1901."
+ },
+ {
+  "slug": "nightingale",
+  "displayName": "Florence Nightingale",
+  "kind": "historical",
+  "era": "1859 publication",
+  "grade": "A",
+  "gradeBasis": "First-person didactic voice in her own treatise.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T22:57:41.387Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #17366",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 63,
-    "exportName": "nurse-nightingale",
-    "oneLine": "Florence Nightingale, voiced entirely from Notes on Nursing: What It Is, and What It Is Not, 1859."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T22:54:30.968Z",
+     "chunks_in": 63,
+     "chunks_kept": 57,
+     "dropped": 6,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "wollstonecraft",
-    "displayName": "Mary Wollstonecraft",
-    "kind": "historical",
-    "era": "1792 publication",
-    "grade": "A",
-    "gradeBasis": "Strongly-voiced essay in her own hand.",
-    "verification": {
-      "machine": {
-        "baits": "10/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #17366",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 63,
+  "exportName": "nurse-nightingale",
+  "oneLine": "Florence Nightingale, voiced entirely from Notes on Nursing: What It Is, and What It Is Not, 1859."
+ },
+ {
+  "slug": "wollstonecraft",
+  "displayName": "Mary Wollstonecraft",
+  "kind": "historical",
+  "era": "1792 publication",
+  "grade": "A",
+  "gradeBasis": "Strongly-voiced essay in her own hand.",
+  "verification": {
+   "machine": {
+    "baits": "10/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T00:58:02.608Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #3420",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 127,
-    "exportName": "philosopher-wollstonecraft",
-    "oneLine": "Mary Wollstonecraft, voiced entirely from A Vindication of the Rights of Woman, 1792."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T00:52:22.995Z",
+     "chunks_in": 127,
+     "chunks_kept": 105,
+     "dropped": 22,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "rousseau",
-    "displayName": "Jean-Jacques Rousseau",
-    "kind": "historical",
-    "era": "1903 translation",
-    "grade": "B",
-    "gradeBasis": "Foundational first-person confessional autobiography (12 books), but the PG text is the 1903 Aldus Society EXPURGATED translation - certain passages are cut, and modern unexpurgated translations are copyrighted.",
-    "verification": {
-      "machine": {
-        "baits": "5/6",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Project Gutenberg #3420",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 127,
+  "exportName": "philosopher-wollstonecraft",
+  "oneLine": "Mary Wollstonecraft, voiced entirely from A Vindication of the Rights of Woman, 1792."
+ },
+ {
+  "slug": "rousseau",
+  "displayName": "Jean-Jacques Rousseau",
+  "kind": "historical",
+  "era": "1903 translation",
+  "grade": "B",
+  "gradeBasis": "Foundational first-person confessional autobiography (12 books), but the PG text is the 1903 Aldus Society EXPURGATED translation - certain passages are cut, and modern unexpurgated translations are copyrighted.",
+  "verification": {
+   "machine": {
+    "baits": "5/6",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "FAIL",
+     "ts": "2026-07-11T20:55:50.715Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": false,
+     "tokenFresh": false
     },
-    "edition": "Aldus Society translation 1903 (expurgated), Project Gutenberg #3913",
-    "licenseBasis": "translation pre-1930 (1903), public domain",
-    "chunkCount": 409,
-    "exportName": "philosopher-rousseau",
-    "oneLine": "Jean-Jacques Rousseau, voiced entirely from The Confessions of Jean Jacques Rousseau, Aldus Society translation 1903."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:38:32.807Z",
+     "chunks_in": 408,
+     "chunks_kept": 408,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "teresa-avila",
-    "displayName": "Teresa of Avila",
-    "kind": "historical",
-    "era": "1870 translation",
-    "grade": "B",
-    "gradeBasis": "Spiritual autobiography, first-person throughout.",
-    "verification": {
-      "machine": {
-        "baits": "5/6",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "Aldus Society translation 1903 (expurgated), Project Gutenberg #3913",
+  "licenseBasis": "translation pre-1930 (1903), public domain",
+  "chunkCount": 409,
+  "exportName": "philosopher-rousseau",
+  "oneLine": "Jean-Jacques Rousseau, voiced entirely from The Confessions of Jean Jacques Rousseau, Aldus Society translation 1903."
+ },
+ {
+  "slug": "teresa-avila",
+  "displayName": "Teresa of Avila",
+  "kind": "historical",
+  "era": "1870 translation",
+  "grade": "B",
+  "gradeBasis": "Spiritual autobiography, first-person throughout.",
+  "verification": {
+   "machine": {
+    "baits": "5/6",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T20:55:50.490Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "David Lewis translation 1870, Project Gutenberg #8120",
-    "licenseBasis": "translation pre-1930 (1870), public domain",
-    "chunkCount": 238,
-    "exportName": "mystic-teresa",
-    "oneLine": "Teresa of Avila, voiced entirely from The Life of St. Teresa of Jesus, tr. David Lewis 1870."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:27:03.853Z",
+     "chunks_in": 214,
+     "chunks_kept": 214,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "columbus",
-    "displayName": "Christopher Columbus",
-    "kind": "historical",
-    "era": "pre-1930 translation",
-    "grade": "B",
-    "gradeBasis": "Five genuine first-person letters describing his voyages plus related contact-era documents - primary contact-era voice, in the R.",
-    "verification": {
-      "machine": {
-        "baits": "9/9",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
+  "edition": "David Lewis translation 1870, Project Gutenberg #8120",
+  "licenseBasis": "translation pre-1930 (1870), public domain",
+  "chunkCount": 238,
+  "exportName": "mystic-teresa",
+  "oneLine": "Teresa of Avila, voiced entirely from The Life of St. Teresa of Jesus, tr. David Lewis 1870."
+ },
+ {
+  "slug": "columbus",
+  "displayName": "Christopher Columbus",
+  "kind": "historical",
+  "era": "pre-1930 translation",
+  "grade": "B",
+  "gradeBasis": "Five genuine first-person letters describing his voyages plus related contact-era documents - primary contact-era voice, in the R.",
+  "verification": {
+   "machine": {
+    "baits": "9/9",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T20:55:48.171Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "R. H. Major translation/edition, Project Gutenberg #77820",
-    "licenseBasis": "translation pre-1930, public domain",
-    "chunkCount": 77,
-    "exportName": "explorer-columbus",
-    "oneLine": "Christopher Columbus, voiced entirely from Select Letters of Christopher Columbus, tr. R. H. Major."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:16:05.508Z",
+     "chunks_in": 76,
+     "chunks_kept": 76,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "wheatley",
-    "displayName": "Phillis Wheatley",
-    "kind": "historical",
-    "era": "pre-1930 publication",
-    "grade": "B",
-    "gradeBasis": "First African-American woman published (1773), clean PD - but the corpus is POETRY only, thin and formal as a conversational voice, mediated by 18th-century verse convention.",
-    "verification": {
-      "machine": {
-        "baits": "5/6",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "R. H. Major translation/edition, Project Gutenberg #77820",
+  "licenseBasis": "translation pre-1930, public domain",
+  "chunkCount": 77,
+  "exportName": "explorer-columbus",
+  "oneLine": "Christopher Columbus, voiced entirely from Select Letters of Christopher Columbus, tr. R. H. Major."
+ },
+ {
+  "slug": "wheatley",
+  "displayName": "Phillis Wheatley",
+  "kind": "historical",
+  "era": "pre-1930 publication",
+  "grade": "B",
+  "gradeBasis": "First African-American woman published (1773), clean PD - but the corpus is POETRY only, thin and formal as a conversational voice, mediated by 18th-century verse convention.",
+  "verification": {
+   "machine": {
+    "baits": "5/6",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-11T20:55:48.071Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Religious and Moral Poems, Project Gutenberg #409 (variant title of her collected poems)",
-    "licenseBasis": "pre-1930 US publication (1773), public domain",
-    "chunkCount": 24,
-    "exportName": "poet-wheatley",
-    "oneLine": "Phillis Wheatley, voiced entirely from Religious and Moral Poems, Phillis Wheatley (Project Gutenberg #409)."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T20:14:32.376Z",
+     "chunks_in": 23,
+     "chunks_kept": 23,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "jane-eyre",
-    "displayName": "Jane Eyre",
-    "kind": "fictional",
-    "era": "1847 publication",
-    "grade": "A",
-    "gradeBasis": "Best fiction first-person on the sweep: Jane narrates her own life throughout (the PG title is literally An Autobiography) - sustained, intimate first-person voice.",
-    "verification": {
-      "machine": {
-        "baits": "10/10",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Religious and Moral Poems, Project Gutenberg #409 (variant title of her collected poems)",
+  "licenseBasis": "pre-1930 US publication (1773), public domain",
+  "chunkCount": 24,
+  "exportName": "poet-wheatley",
+  "oneLine": "Phillis Wheatley, voiced entirely from Religious and Moral Poems, Phillis Wheatley (Project Gutenberg #409)."
+ },
+ {
+  "slug": "jane-eyre",
+  "displayName": "Jane Eyre",
+  "kind": "fictional",
+  "era": "1847 publication",
+  "grade": "A",
+  "gradeBasis": "Best fiction first-person on the sweep: Jane narrates her own life throughout (the PG title is literally An Autobiography) - sustained, intimate first-person voice.",
+  "verification": {
+   "machine": {
+    "baits": "10/10",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:33.921Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #1260",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 245,
-    "exportName": "fictional-jane-eyre",
-    "oneLine": "Jane Eyre, voiced entirely from Jane Eyre: An Autobiography, 1847."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:22.610Z",
+     "chunks_in": 245,
+     "chunks_kept": 245,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "huck-finn",
-    "displayName": "Huckleberry Finn",
-    "kind": "fictional",
-    "era": "1885 publication",
-    "grade": "A",
-    "gradeBasis": "Huck narrates in first-person vernacular throughout - the vernacular voice is the whole point.",
-    "verification": {
-      "machine": {
-        "baits": "5/6",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #1260",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 245,
+  "exportName": "fictional-jane-eyre",
+  "oneLine": "Jane Eyre, voiced entirely from Jane Eyre: An Autobiography, 1847."
+ },
+ {
+  "slug": "huck-finn",
+  "displayName": "Huckleberry Finn",
+  "kind": "fictional",
+  "era": "1885 publication",
+  "grade": "A",
+  "gradeBasis": "Huck narrates in first-person vernacular throughout - the vernacular voice is the whole point.",
+  "verification": {
+   "machine": {
+    "baits": "5/6",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:04:22.209Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #76",
-    "licenseBasis": "pre-1930 US publication (1884/1885), public domain",
-    "chunkCount": 136,
-    "exportName": "fictional-huck",
-    "oneLine": "Huckleberry Finn, voiced entirely from Adventures of Huckleberry Finn, 1885."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:04:13.308Z",
+     "chunks_in": 136,
+     "chunks_kept": 136,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "david-copperfield",
-    "displayName": "David Copperfield",
-    "kind": "fictional",
-    "era": "1849-1850 publication",
-    "grade": "A",
-    "gradeBasis": "David narrates his own life first-person, a sustained bildungsroman voice (Dickens's own favorite).",
-    "verification": {
-      "machine": {
-        "baits": "11/11",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": false,
-      "expertVerified": false
+  "edition": "Project Gutenberg #76",
+  "licenseBasis": "pre-1930 US publication (1884/1885), public domain",
+  "chunkCount": 136,
+  "exportName": "fictional-huck",
+  "oneLine": "Huckleberry Finn, voiced entirely from Adventures of Huckleberry Finn, 1885."
+ },
+ {
+  "slug": "david-copperfield",
+  "displayName": "David Copperfield",
+  "kind": "fictional",
+  "era": "1849-1850 publication",
+  "grade": "A",
+  "gradeBasis": "David narrates his own life first-person, a sustained bildungsroman voice (Dickens's own favorite).",
+  "verification": {
+   "machine": {
+    "baits": "11/11",
+    "integrityPinned": true,
+    "byteVerified": true,
+    "corpusGate": {
+     "gate": "corpus-gate/1.2.0",
+     "verdict": "PASS",
+     "ts": "2026-07-12T01:03:58.864Z",
+     "grounding": true,
+     "language": true,
+     "apparatus": true,
+     "tokenFresh": true
     },
-    "edition": "Project Gutenberg #766",
-    "licenseBasis": "pre-1923 publication, public domain",
-    "chunkCount": 459,
-    "exportName": "fictional-copperfield",
-    "oneLine": "David Copperfield, voiced entirely from David Copperfield, 1849-1850."
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-12T01:03:37.220Z",
+     "chunks_in": 459,
+     "chunks_kept": 459,
+     "dropped": 0,
+     "stripped": 0
+    }
+   },
+   "engineReviewed": false,
+   "expertVerified": false
   },
-  {
-    "slug": "wollstonecraft-sweden",
-    "displayName": "Mary Wollstonecraft (Letters from Sweden)",
-    "kind": "historical",
-    "era": "1796 publication",
-    "grade": "A",
-    "gradeBasis": "genuine, unmediated, first-person travel letters in her own English, written during her",
-    "verification": {
-      "machine": {
-        "baits": "9/9",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
-    },
-    "edition": "Mary Wollstonecraft, 1796, Project Gutenberg #3529",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 68,
-    "exportName": "writer-wollstonecraft-sweden",
-    "oneLine": "Mary Wollstonecraft (Letters from Sweden)."
+  "edition": "Project Gutenberg #766",
+  "licenseBasis": "pre-1923 publication, public domain",
+  "chunkCount": 459,
+  "exportName": "fictional-copperfield",
+  "oneLine": "David Copperfield, voiced entirely from David Copperfield, 1849-1850."
+ },
+ {
+  "slug": "wollstonecraft-sweden",
+  "displayName": "Mary Wollstonecraft (Letters from Sweden)",
+  "kind": "historical",
+  "era": "1796 publication",
+  "grade": "A",
+  "gradeBasis": "genuine, unmediated, first-person travel letters in her own English, written during her",
+  "verification": {
+   "machine": {
+    "baits": "9/9",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "brillat-savarin",
-    "displayName": "Brillat-Savarin",
-    "kind": "historical",
-    "era": "1825 translation",
-    "grade": "A",
-    "gradeBasis": "his own first-person essayistic voice - witty, digressive, self-assured - runs through the",
-    "verification": {
-      "machine": {
-        "baits": "8/9",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
-    },
-    "edition": "Jean Anthelme Brillat-Savarin, tr. Fayette Robinson, 1825, Project Gutenberg #5434",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 90,
-    "exportName": "writer-brillat-savarin",
-    "oneLine": "Brillat-Savarin."
+  "edition": "Mary Wollstonecraft, 1796, Project Gutenberg #3529",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 68,
+  "exportName": "writer-wollstonecraft-sweden",
+  "oneLine": "Mary Wollstonecraft (Letters from Sweden)."
+ },
+ {
+  "slug": "brillat-savarin",
+  "displayName": "Brillat-Savarin",
+  "kind": "historical",
+  "era": "1825 translation",
+  "grade": "A",
+  "gradeBasis": "his own first-person essayistic voice - witty, digressive, self-assured - runs through the",
+  "verification": {
+   "machine": {
+    "baits": "8/9",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "sojourner-truth",
-    "displayName": "Sojourner Truth (as told to Olive Gilbert)",
-    "kind": "historical",
-    "era": "1850 publication",
-    "grade": "B",
-    "gradeBasis": "Sojourner Truth was illiterate.",
-    "verification": {
-      "machine": {
-        "baits": "9/9",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
-    },
-    "edition": "Olive Gilbert, 1850, Project Gutenberg #1674",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 51,
-    "exportName": "activist-sojourner-truth",
-    "oneLine": "Sojourner Truth (as told to Olive Gilbert)."
+  "edition": "Jean Anthelme Brillat-Savarin, tr. Fayette Robinson, 1825, Project Gutenberg #5434",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 90,
+  "exportName": "writer-brillat-savarin",
+  "oneLine": "Brillat-Savarin."
+ },
+ {
+  "slug": "sojourner-truth",
+  "displayName": "Sojourner Truth (as told to Olive Gilbert)",
+  "kind": "historical",
+  "era": "1850 publication",
+  "grade": "B",
+  "gradeBasis": "Sojourner Truth was illiterate.",
+  "verification": {
+   "machine": {
+    "baits": "9/9",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": true,
+   "expertVerified": false
   },
-  {
-    "slug": "twain-travel",
-    "displayName": "Mark Twain (travel voice)",
-    "kind": "historical",
-    "era": "1869 publication",
-    "grade": "A",
-    "gradeBasis": "Twain writing as himself, in his own first person, in his own English - no translator, no",
-    "verification": {
-      "machine": {
-        "baits": "9/9",
-        "integrityPinned": true,
-        "byteVerified": true
-      },
-      "engineReviewed": true,
-      "expertVerified": false
-    },
-    "edition": "Mark Twain, Project Gutenberg #3176 (1869) + #119 (1880)",
-    "licenseBasis": "pre-1930 US publication, public domain",
-    "chunkCount": 491,
-    "exportName": "writer-twain-travel",
-    "oneLine": "Mark Twain (travel voice)."
-  }
+  "edition": "Olive Gilbert, 1850, Project Gutenberg #1674",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 51,
+  "exportName": "activist-sojourner-truth",
+  "oneLine": "Sojourner Truth (as told to Olive Gilbert)."
+ },
+ {
+  "slug": "twain-travel",
+  "displayName": "Mark Twain (travel voice)",
+  "kind": "historical",
+  "era": "1869 publication",
+  "grade": "A",
+  "gradeBasis": "Twain writing as himself, in his own first person, in his own English - no translator, no",
+  "verification": {
+   "machine": {
+    "baits": "9/9",
+    "integrityPinned": true,
+    "byteVerified": true
+   },
+   "engineReviewed": true,
+   "expertVerified": false
+  },
+  "edition": "Mark Twain, Project Gutenberg #3176 (1869) + #119 (1880)",
+  "licenseBasis": "pre-1930 US publication, public domain",
+  "chunkCount": 491,
+  "exportName": "writer-twain-travel",
+  "oneLine": "Mark Twain (travel voice)."
+ },
+ {
+  "slug": "coolidge",
+  "displayName": "Calvin Coolidge",
+  "kind": "historical",
+  "era": "1929 publication",
+  "grade": "pending",
+  "gradeBasis": "Genuine single-voice autobiography (Cosmopolitan Book Corp 1929, PG 76649), famously terse first-person prose; grade awaits Tony adjudication after gate + datagen + bait suite.",
+  "verification": {
+   "machine": {
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:25:49.187Z",
+     "chunks_in": 62,
+     "chunks_kept": 62,
+     "dropped": 0,
+     "stripped": 0
+    }
+   }
+  },
+  "edition": "The Autobiography of Calvin Coolidge, 1929 (Project Gutenberg #76649)",
+  "licenseBasis": "1929 US publication, public domain (pre-1930)",
+  "chunkCount": 62,
+  "exportName": "president-coolidge",
+  "oneLine": "30th US president, the famously terse New Englander, in his own compact autobiography"
+ },
+ {
+  "slug": "van-buren",
+  "displayName": "Martin Van Buren",
+  "kind": "historical",
+  "era": "1920 publication (written 1850s)",
+  "grade": "pending",
+  "gradeBasis": "Genuine unfinished autobiography in his own hand (pub. 1920, AHA/GPO, ed. Fitzpatrick). SOURCE IS OCR (archive.org scan) - verbatim quotes may carry OCR typos until a human-checked pass; account ends abruptly ~1833-34. Grade awaits Tony adjudication after gate + datagen + baits.",
+  "verification": {
+   "machine": {
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:35:43.524Z",
+     "chunks_in": 625,
+     "chunks_kept": 576,
+     "dropped": 49,
+     "stripped": 0
+    }
+   }
+  },
+  "edition": "The Autobiography of Martin Van Buren, AHA Annual Report 1918 vol II (pub. 1920)",
+  "licenseBasis": "1920 US publication, public domain (pre-1930)",
+  "chunkCount": 576,
+  "exportName": "president-van-buren",
+  "oneLine": "8th US president, the Little Magician, in his own unfinished autobiography"
+ },
+ {
+  "slug": "polk",
+  "displayName": "James K. Polk",
+  "kind": "historical",
+  "era": "1910 publication (diary 1845-1849)",
+  "grade": "pending",
+  "gradeBasis": "Daily presidential diary in his own voice (ed. Quaife 1910, 4 vols, from the original manuscript). SOURCE IS OCR (archive.org scans) - verbatim quotes may carry OCR typos until a human-checked pass; scoped to the presidency only. Grade awaits Tony adjudication after gate + datagen + baits.",
+  "verification": {
+   "machine": {
+    "corpusScrub": {
+     "scrub": "corpus-scrub/1.0.0",
+     "ts": "2026-07-11T21:30:09.401Z",
+     "chunks_in": 786,
+     "chunks_kept": 774,
+     "dropped": 12,
+     "stripped": 0
+    }
+   }
+  },
+  "edition": "The Diary of James K. Polk, ed. Milo M. Quaife, 4 vols, A.C. McClurg 1910",
+  "licenseBasis": "1910 US publication, public domain (pre-1930)",
+  "chunkCount": 774,
+  "exportName": "president-polk",
+  "oneLine": "11th US president, the one-term workhorse, in his dense daily White House diary"
+ }
 ]
