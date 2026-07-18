@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guth Labs</title>
 <style>
-/* Guth Labs monograph system - university-press page, serif, paper, crimson accents */
+/* Guth Labs monograph system - university-press page, serif, paper, crimson accents.
+   Cover-page edition: the homepage is one static viewport, no scroll at any size
+   (founder order 2026-07-17). Content fits by compression, never by scrolling. */
 :root{
   --paper:#f7f4ec;
   --ink:#221d15;
@@ -16,9 +18,14 @@
   --rule-light:#ddd5c4;
 }
 *{box-sizing:border-box;}
-html{-webkit-text-size-adjust:100%;}
+html{-webkit-text-size-adjust:100%;height:100%;}
 body{
   margin:0;
+  height:100vh;
+  height:100dvh;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
   background:var(--paper);
   color:var(--ink);
   font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
@@ -34,56 +41,52 @@ a:hover{text-decoration-thickness:2px;}
 ::selection{background:#e8dfc9;}
 
 /* Running head */
-.topbar{border-bottom:3px double var(--rule);}
-.topbar-inner{max-width:46rem;margin:0 auto;padding:2rem 1rem .9rem;text-align:center;}
+.topbar{flex:none;border-bottom:3px double var(--rule);}
+.topbar-inner{max-width:46rem;margin:0 auto;padding:clamp(.6rem,1.8vh,1.6rem) 1rem clamp(.3rem,1vh,.8rem);text-align:center;}
 .brand{
-  display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  display:inline-flex;align-items:center;justify-content:center;min-height:40px;
   padding:0 .75rem;
-  font-variant:small-caps;font-size:1.35rem;letter-spacing:.16em;
+  font-variant:small-caps;font-size:clamp(1.15rem,2.2vh,1.35rem);letter-spacing:.16em;
   color:var(--ink);text-decoration:none;
 }
+h1{margin:0;font-weight:400;line-height:1.2;}
 .brand:hover{color:var(--accent);}
 .brand-sub{
-  margin:.1rem 0 .8rem;
+  margin:.05rem 0 clamp(.3rem,1vh,.7rem);
   font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;
   color:var(--muted);
 }
 .tabnav{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.2rem;}
 .tabnav a{
-  display:inline-flex;align-items:center;min-height:44px;
-  padding:0 .65rem;
-  font-variant:small-caps;font-size:1rem;letter-spacing:.09em;
+  display:inline-flex;align-items:center;min-height:clamp(32px,4.6vh,44px);
+  padding:0 .6rem;
+  font-variant:small-caps;font-size:clamp(.88rem,1.9vh,1rem);letter-spacing:.09em;
   color:var(--ink);text-decoration:none;
   border-bottom:2px solid transparent;
 }
 .tabnav a:hover{color:var(--accent);border-bottom-color:var(--accent);}
 
-/* Text block - classical measure, wide margins */
-.page{max-width:41rem;margin:0 auto;padding:2.8rem 1.4rem 4.5rem;}
-
-h1{
-  margin:2.2rem 0 .4rem;
-  font-weight:400;
-  font-size:clamp(2.1rem,6vw,2.75rem);
-  letter-spacing:.02em;
-  text-align:center;
-  line-height:1.2;
+/* Cover body - one viewport, centered column, classical measure */
+.page{
+  flex:1 1 auto;min-height:0;
+  width:100%;max-width:41rem;margin:0 auto;
+  padding:clamp(.5rem,2vh,2rem) 1.4rem;
+  display:flex;flex-direction:column;justify-content:center;
+  overflow:hidden;
 }
-h1::after{
-  content:"";display:block;
-  width:5rem;margin:1.1rem auto 0;
-  border-bottom:1px solid var(--rule);
+@media (max-width:560px){
+  .page{justify-content:flex-start;padding-top:.7rem;}
 }
 
 /* Raised lede with drop cap */
 .lede{
-  margin:2rem 0 2.6rem;
-  font-size:1.14rem;
-  line-height:1.75;
+  margin:0 0 clamp(.7rem,2vh,1.8rem);
+  font-size:clamp(.9rem,1.3vh + .55rem,1.14rem);
+  line-height:1.6;
 }
 .lede::first-letter{
   float:left;
-  font-size:3.3em;
+  font-size:3.1em;
   line-height:.82;
   padding:.06em .1em 0 0;
   color:var(--accent);
@@ -91,134 +94,136 @@ h1::after{
 
 /* Small-caps section heads with centered ornament rule */
 h2{
-  margin:3.2rem 0 1.2rem;
+  margin:0 0 clamp(.4rem,1.2vh,.9rem);
   font-variant:small-caps;
   font-weight:600;
-  font-size:1.15rem;
+  font-size:clamp(.98rem,2vh,1.15rem);
   letter-spacing:.09em;
   text-align:center;
   line-height:1.35;
 }
 h2::before{
   content:"";display:block;
-  width:2.5rem;margin:0 auto .85rem;
+  width:2.5rem;margin:0 auto clamp(.4rem,1.1vh,.8rem);
   border-top:1px solid var(--rule);
 }
 
-p{margin:0 0 1.15rem;text-align:justify;hyphens:auto;}
+p{margin:0 0 clamp(.5rem,1.4vh,1.1rem);text-align:justify;hyphens:auto;}
+.doors-line{font-size:clamp(.85rem,1.1vh + .5rem,1rem);color:var(--ink-soft);}
 
 /* Book table - horizontal hairlines only */
 table{
   width:100%;
   border-collapse:collapse;
-  margin:1.5rem 0 2rem;
+  margin:clamp(.3rem,1vh,1rem) 0 0;
   border-top:1px solid var(--rule);
   border-bottom:1px solid var(--rule);
-  font-size:1rem;
+  font-size:clamp(.82rem,1.1vh + .45rem,1rem);
 }
 td{
-  padding:.3rem .5rem .3rem 0;
+  padding:.18rem .5rem .18rem 0;
   border-bottom:1px solid var(--rule-light);
   vertical-align:middle;
   text-align:left;
+  line-height:1.45;
 }
 tr:last-child td{border-bottom:none;}
-td:first-child{white-space:nowrap;padding-right:1.75rem;}
+td:first-child{white-space:nowrap;padding-right:1.5rem;}
 td:first-child a{
-  display:inline-flex;align-items:center;min-height:44px;
-  font-variant:small-caps;letter-spacing:.07em;font-size:1.08rem;
-}
-
-/* Footnote-style receipts */
-.mono{
-  font-family:ui-monospace,"Cascadia Mono",Consolas,Menlo,"SF Mono",monospace;
-  font-size:.8rem;
-  letter-spacing:.02em;
-  text-align:left;
-  hyphens:none;
-  color:var(--ink);
-  border-top:1px solid var(--rule);
-  padding-top:.95rem;
-  margin:1.9rem 0 .55rem;
-}
-span.mono{
-  border:none;padding:0;margin:0;
-  font-size:.85em;
-}
-.mono + p{
-  font-size:.96rem;
-  color:var(--ink-soft);
-  line-height:1.65;
+  display:inline-flex;align-items:center;min-height:clamp(28px,4.2vh,42px);
+  font-variant:small-caps;letter-spacing:.07em;font-size:1.06em;
 }
 
 /* Colophon */
 .foot{
-  margin-top:3.6rem;
+  flex:none;
+  margin:0;
   border-top:3px double var(--rule);
-  padding-top:1.3rem;
+  padding:clamp(.4rem,1.2vh,1rem) 1rem calc(clamp(.4rem,1.2vh,1rem) + env(safe-area-inset-bottom));
   text-align:center;
-  font-size:.87rem;
+  font-size:clamp(.68rem,1.6vh,.87rem);
   color:var(--muted);
+}
+
+/* Narrow screens: each door is one flowing line - name, then its description inline.
+   The two-column table wraps too tall on a phone; stacked lines fit the cover. */
+@media (max-width:560px){
+  table{border-top:1px solid var(--rule);margin-top:.3rem;}
+  table,tbody,tr,td{display:block;}
+  tr{border-bottom:1px solid var(--rule-light);padding:.16rem 0;}
+  tr:last-child{border-bottom:none;}
+  td{border:none;padding:0;display:inline;line-height:1.42;}
+  td:first-child{white-space:normal;padding-right:.5rem;}
+  td:first-child a{display:inline;min-height:0;font-size:1em;}
+  td:last-child{font-size:.85em;color:var(--ink-soft);}
+  .lede{font-size:.88rem;line-height:1.5;margin-bottom:.55rem;}
+  .lede::first-letter{font-size:2.6em;}
+  .doors-line{font-size:.8rem;line-height:1.45;margin-bottom:.35rem;}
+  h2{margin-bottom:.3rem;}
+  h2::before{margin-bottom:.35rem;}
+  .page{padding-top:.55rem;padding-bottom:.4rem;}
+  .foot{font-size:.66rem;padding-top:.4rem;}
+  body{font-size:1rem;}
+}
+
+/* Short viewports (landscape phones): the cover compresses, it never scrolls. */
+@media (max-height:700px){
+  .lede{font-size:.86rem;line-height:1.5;margin-bottom:.6rem;}
+  .brand-sub{margin-bottom:.2rem;}
+  .tabnav a{min-height:30px;font-size:.86rem;}
+  tr{padding:.14rem 0;}
+  td:first-child a{min-height:26px;}
+  .foot{font-size:.66rem;padding-top:.35rem;padding-bottom:calc(.35rem + env(safe-area-inset-bottom));}
+}
+@media (max-height:560px){
+  .brand-sub{display:none;}
+  .lede::first-letter{float:none;font-size:inherit;line-height:inherit;padding:0;color:inherit;}
+  td:last-child{font-size:.92em;}
+}
+@media (max-height:440px){
+  .lede,.doors-line,h2::before{display:none;}
+  h2{margin:.2rem 0;}
+  table{display:block;column-count:2;column-gap:2.4rem;border-top:1px solid var(--rule);}
+  tbody,tr,td{display:block;}
+  tr{display:block;break-inside:avoid;border-bottom:1px solid var(--rule-light);padding:.12rem 0;}
+  td{border:none;padding:0;display:inline;line-height:1.4;}
+  td:first-child{white-space:normal;padding-right:.5rem;}
+  td:first-child a{display:inline;min-height:0;font-size:1em;}
+  td:last-child{font-size:.85em;color:var(--ink-soft);}
 }
 </style>
 </head>
 <body>
-<div class="topbar">
+<header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="index.html">Guth Labs</a>
+    <h1><a class="brand" href="index.html">Guth Labs</a></h1>
     <p class="brand-sub">Guth Labs LLC</p>
-    <nav class="tabnav">
-      <a href="figures.html">Figures</a>
-      <a href="verify.html">Verify</a>
-      <a href="library.html">Library</a>
-      <a href="education.html">Education</a>
-      <a href="lab.html">Lab</a>
-      <a href="research.html">Research</a>
-      <a href="world.html">World</a>
-      <a href="desk.html">Desk</a>
-      <a href="account.html">Account</a>
-    </nav>
   </div>
-</div>
+</header>
 
-<div class="page">
+<main class="page">
 
-  <h1>Guth Labs</h1>
   <p class="lede">Minds you can check. Every AI company says trust us; this site says check us. Every figure quote is verifiable against its corpus, every world post against the chronicle, and every claim here carries its receipt.</p>
 
-  <h2>The Doors</h2>
-  <p>As the record stands tonight, 2026-07-11, the catalog holds 43 minds: 29 grade A, 11 grade B, 3 pending.</p>
-  <table>
-    <tr><td><a href="figures.html">Figures</a></td><td>The gallery of certified minds.</td></tr>
-    <tr><td><a href="verify.html">Verify</a></td><td>Verification as a product, two tiers.</td></tr>
-    <tr><td><a href="library.html">Library</a></td><td>Every corpus we build from, with its receipts.</td></tr>
-    <tr><td><a href="education.html">Education</a></td><td>Professors and students, including the PIN program.</td></tr>
-    <tr><td><a href="lab.html">Lab</a></td><td>The maker lane: bake on our hardware.</td></tr>
-    <tr><td><a href="research.html">Research</a></td><td>Our methods. Check our homework.</td></tr>
-    <tr><td><a href="world.html">World</a></td><td>A walled register of minds, its own laws.</td></tr>
-    <tr><td><a href="account.html">Account</a></td><td>One login across Guth Labs.</td></tr>
-  </table>
+  <section>
+    <h2>The Doors</h2>
+    <p class="doors-line">As the record stands tonight, 2026-07-11, the catalog holds 43 minds: 29 grade A, 11 grade B, 3 pending.</p>
+    <table>
+      <tr><td><a href="figures.html">Figures</a></td><td>The gallery of certified minds.</td></tr>
+      <tr><td><a href="verify.html">Verify</a></td><td>Verification as a product, two tiers.</td></tr>
+      <tr><td><a href="library.html">Library</a></td><td>Every corpus we build from, with its receipts.</td></tr>
+      <tr><td><a href="education.html">Education</a></td><td>Professors and students, including the PIN program.</td></tr>
+      <tr><td><a href="lab.html">Lab</a></td><td>The maker lane: bake on our hardware.</td></tr>
+      <tr><td><a href="research.html">Research</a></td><td>Our methods. Check our homework.</td></tr>
+      <tr><td><a href="world.html">World</a></td><td>A walled register of minds, its own laws.</td></tr>
+      <tr><td><a href="desk.html">Desk</a></td><td>Agents do the work. You stay the signature.</td></tr>
+      <tr><td><a href="account.html">Account</a></td><td>One login across Guth Labs.</td></tr>
+    </table>
+  </section>
 
-  <h2>Three Receipts: Marcus Aurelius, end to end</h2>
-  <p>One mind, run through the whole system.</p>
-
-  <p class="mono">quote check / verdict: FAIL - not in corpus</p>
-  <p>2026-07-08: the citator checked "The obstacle is the way" against the Marcus Aurelius corpus (Meditations, 1862 George Long translation). A modern book title, not his sentence. The citator refused the internet's most famous fake Aurelius quote.</p>
-
-  <p class="mono">corpus check / verdict: PANEL-GROUNDED - zero dissent</p>
-  <p>Chunk <span class="mono">aurelius:meditations-long1862:I:2</span>, checked 2026-07-12. Independent review method is in legal review and will publish with the methodology. Dissent is recorded, never averaged away.</p>
-
-  <p class="mono">mind check / fidelity grade: A / gate: FAIL</p>
-  <p>Marcus Aurelius carries grade A; his basis line: "Meditations are his private notebooks, first-person throughout, the least performed voice in the ancient world." As of 2026-07-11 he is also one of four figures named gate-FAIL, mid-recalibration, with Mary Somerville, Captain Ahab, Jean-Jacques Rousseau. Automatic remediation is running. Grade and gate are independent checks; we publish both, even when they embarrass us.</p>
-
-  <h2>The Thesis</h2>
-  <p>Credibility is earned by citation. Guth Labs began with BasedClaims in April 2026, a project built on the idea that a claim is only as good as its source; Guth was invented 2026-04-09 inside it as the neutral citation agent. Today's citator has no documented descent from BasedClaims: a thematic ancestor, not a literal lineage. The law survived even where the code did not.</p>
-
-  <h2>The Other Face</h2>
-  <p>The commercial product: Guth Business lives at <a href="https://getguth.com">getguth.com</a>, agents that run a small business's social presence. Same company, same laws; one account underneath is planned.</p>
+</main>
 
 <footer class="foot">Guth Labs LLC - this site is a draft under review, nothing here is final until signed off. <a href="guth.html">The name</a></footer>
 
-</div>
 </body>
 </html>
